@@ -1,0 +1,15 @@
+// Importa solo los breakpoints de Bootstrap desde node_modules
+@import "../../../node_modules/bootstrap/scss/bootstrap"; // Esto importa todo Bootstrap
+
+// Ejemplo de uso de breakpoints
+body {
+    background-color: lightblue;
+
+    @include media-breakpoint-down(md) {
+        background-color: lightgreen;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-color: lightcoral;
+    }
+}
