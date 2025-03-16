@@ -11965,11 +11965,113 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/monserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Este rango cubre todos los pesos disponibles en la fuente variable */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/font/nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
+  font-style: normal; /* Debe ser font-style y no font-family */
+}
+/*---------------------------------Fin importacion de fuentes------------------------------------------*/
 * {
   margin: 0;
 }
 
 body {
-  background-color: rgb(211, 212, 221);
+  background-color: rgb(232, 233, 243);
   height: 100vh;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*-------------------Barra de navegacion--------------*/
+.navbar-brand {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-link {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/*-------------Fin barran de navegacion-------------------------*/
+/*----------Contenido texto----------*/
+.main_section1_div_texto_titulo {
+  font-family: Montserrat;
+  color: #222F3E;
+  font-weight: 700;
+}
+
+.main_section1_div_texto_subtitulo {
+  font-family: Montserrat;
+  color: #2D3436;
+  font-weight: 500;
+}
+
+.main_section1_div_texto_subtitulo_descripcion {
+  font-family: Nunito;
+  color: #2D3436;
+  font: weight 400;
+}
+
+.main_section1_div_texto_boton {
+  font-family: Montserrat;
+  font-weight: 700;
+  background-color: #1f89fa;
+}
+
+.main.main_section1_div_texto_boton:hover {
+  font-family: Nunito;
+  color: #2D3436;
+  font: weight 400;
+}
+
+.main_section2_div_texto_descripcion {
+  font-family: Nunito;
+  color: #354144;
+  font: weight 400;
+}
+
+h5, .h5 {
+  font-family: Montserrat;
+  color: #222F3E;
+  font-weight: 700;
+}
+
+li {
+  font-family: Nunito;
+  font: weight 600;
+  color: #2D3436;
+}
+
+/*----------Fin contenido---------------*/
+/*-------------Footer---------------*/
+/* Oculta inicialmente las listas */
+h6, .h6 {
+  font-family: Montserrat;
+}
+
+/* Para ocultar inicialmente las listas */
+.toggle-content {
+  display: none;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Estilo de los botones */
+.toggle-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/*----------------Fin footer-----------------*//*# sourceMappingURL=index.css.map */

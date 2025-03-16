@@ -8,7 +8,7 @@
     <title>Easyequip</title>
 </head>
 <body class="">
-  <nav class="navbar navbar-expand-lg  border-bottom border-dark">
+  <nav class="navbar navbar-expand-lg position-absolute  ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Easyequip</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,41 +20,50 @@
             <a class="nav-link active" aria-current="page" href="#">inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nosotros</a>
+            <a class="nav-link active" href="#">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Contacto</a>
+            <a class="nav-link active" aria-disabled="false">Contacto</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-primary rounded-2" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
+  <!----Fin barra de navegacion----->
+
+ <section class="  ">
+  <div><img class="img-fluid position-static" src="/public/assets/imagenes/imagen inicio.jpg" ></div>
+ </section>
 
   <!--Inicio contenido-->
-    <main class="main ">
-      <!--section Texto bienvenida-->
+    <main class="main container mt-3 ">
+      <!------section Texto bienvenida ------>
     <section class="main_section1">
-      <div class="main_section1_imagen1"></div>
-      <div class="main_section1_div" >
-        <p class="main_section1_div_texto_titulo">¡Bienvenido a EasyEquip!</p>
-        <p class="main_section1_div_texto_subtitulo">"Soluciones rápidas y eficientes para la solicitud de materiales y software."</p>
-        <p class="main_section1_div_texto_descripcion" >En EasyEquip, simplificamos el proceso de solicitud de materiales y software para empresas y profesionales. Nuestro sistema ágil y eficiente garantiza que obtengas lo que necesitas, cuando lo necesitas."</p>
-        <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Solicitar Ahora</button>
+      <div class="main_section1_div d-flex flex-column align-items-center mt-4" >
+        <h4 class="main_section1_div_texto_titulo ">¡Bienvenido a EasyEquip!</h4>
+        <h6 class="main_section1_div_texto_subtitulo text-center">"Soluciones rápidas y eficientes para la solicitud de materiales y software."</h6>
+        <button type="button" class="main_section1_div_texto_boton  btn btn-primary rounded-pill mt-4">Solicitar Ahora</button>
       </div>
+      <!------------------Fin seccion texto------------------->
+
       <div class="main_section1_imagen2"></div>
     </section>
-    <!---------------------------------------->
+    <!-----------------Fin Contenido----------------------->
 
-<!--section de tarjetas -->
-    <section class="main_section2">
+
+    <section class="main_section2 mt-3">
+
+      <div><p class="main_section2_div_texto_descripcion text-center fs-6" >En EasyEquip, simplificamos el proceso de solicitud de materiales y software para empresas y profesionales. Nuestro sistema ágil y eficiente garantiza que obtengas lo que necesitas, cuando lo necesitas."</p></div>
+
+      <!--div de tarjetas -->
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card bg-transparent">
-            <img src="/public/assets/imagenes/servicios.gif" class="card-img-top" alt="servicios " style="height: 50px; width: 50px;">
+            <img class=" p-2" width="120px" height="120px" src="/public/assets/imagenes/icons8-services-100.png" alt="services"/>
             <div class="card-body">
               <h5 class="card-title">Servicios Destacados</h5>
               <ul>
@@ -63,14 +72,14 @@
                 <li>Soporte técnico y seguimiento personalizado.</li>
                 <li>Gestión eficiente de pedidos.</li>
               </ul>
-               <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Solicitar Ahora</button>
+               <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Vermas</button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent">
-            <img src="/public/assets/imagenes/Ventajas.gif" class="card-img-top" alt="Beneficios" style="height: 50px; width: 50px;">
-            <div class="card-body">
+          <div class="card bg-transparent ">
+            <img src="/public/assets/imagenes/Ventajas.gif" class=" p-3" alt="Beneficios" style="height: 85px; width: 85px;">
+            <div class="card-body ">
               <h5 class="card-title">Beneficios</h5>
               <ul>
                 <li>Rapidez en la solicitud y entrega.</li>
@@ -78,55 +87,62 @@
                 <li>Sistema intuitivo y amigable.</li>
                 <li>Seguridad en el manejo de tus pedidos.</li>
               </ul>
-              <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Solicitar Ahora</button>
+              <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent">
-            <img src="/public/assets/imagenes/testimonios.gif" class="card-img-top" alt="testimonios" style="height: 50px; width: 50px;">
+          <div class="card bg-transparent ">
+            <img class=" p-3" width="85px" height="85px" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-benefits-productivity-flaticons-lineal-color-flat-icons.png" alt="external-benefits-productivity-flaticons-lineal-color-flat-icons"/> 
             <div class="card-body">
-              <h5 class="card-title">Beneficios</h5>
-              <p>Opiniones de clientes satisfechos.</p>
-              <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Solicitar Ahora</button>
+              <h5 class="card-title">Testimonios</h5>
+              <ul>
+                <li>Opiniones de clientes satisfechos.</li>
+              </ul>
+              <button type="button" class="main_section1_div_texto_boton  btn btn-primary ">Vermas</button>
             </div>
           </div>
         </div>
       </div>
+      <!--------Fin tarjetas------>
     </section>
   </main>
-  <footer class="card-footer">
+
+  <!--Pie de pagina-->
+  <footer class=" mt-4 ">
     <div class="footer_informacion">
-      <p>informacion de Contacto</p>
-      <ul>
-        <li><img src="/public/assets/imagenes/correo.png" alt="correo" >Easyequip2@gamil.com</li>
-        <li> <img src="/public/assets/imagenes/direccion.png" alt="direccion" > Carrera 54 #70-89</li>
-        <li> <img src="/public/assets/imagenes/horario.png" alt="horario"> Lunes a viernes, 8:00 AM a 6:00 PM </li>
-        <li> <img src="/public/assets/imagenes/telefono.png"> 304-382-32-45 </li>
+      <h6 class="toggle-button">Información de Contacto <span class="toggle-icon">+</span></h6>
+      <ul class="toggle-content">
+        <li>Easyequip2@gmail.com</li>
+        <li>Carrera 54 #70-89</li>
+        <li>Lunes a viernes, 8:00 AM a 6:00 PM</li>
+        <li>304-382-32-45</li>
       </ul>
     </div>
+  
     <div class="footer_redes">
-      <p>Redes Sociales</p>
-      <ul>
-        <li>Facebook/li>
+      <h6 class="toggle-button">Redes Sociales <span class="toggle-icon">+</span></h6>
+      <ul class="toggle-content">
+        <li>Facebook</li>
         <li>Instagram</li>
         <li>Whatsapp</li>
       </ul>
     </div>
+  
     <div class="footer_Politicas">
-      <p>Politicas y terminos</p>
-      <ul>
+      <h6 class="toggle-button">Políticas y términos <span class="toggle-icon">+</span></h6>
+      <ul class="toggle-content">
         <li>Aviso de privacidad</li>
-        <li>Terminos y condiciones</li>
+        <li>Términos y condiciones</li>
         <li>Cookies</li>
       </ul>
-    
     </div>
   </footer>
 
- 
+  
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../public/js/toggleMenu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
