@@ -38,7 +38,7 @@ body {
 .navbar-brand{
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 25px;
     
 }
 
@@ -46,11 +46,13 @@ body {
     font-family: Montserrat;
     font-weight:600;
     font-size: 16px;
+    color: rgb(8, 31, 56) !important;
 }
 /*-------------Fin barran de navegacion-------------------------*/
 
 
 /*----------Contenido texto----------*/
+
 .main_section1_div_texto_titulo{
     font-family: Montserrat;
     color: #222F3E;
@@ -70,14 +72,14 @@ body {
 
 }
 
-.main_section1_div_texto_boton{
+.main_section1_div_texto_a{
     font-family: Montserrat;
     font-weight:700;
     background-color:#1f89fa;
 
 }
 
-.main.main_section1_div_texto_boton:hover{
+.main.main_section1_div_texto_a:hover{
     font-family: Nunito;
     color:#2D3436;
     font: weight 400;
@@ -103,6 +105,8 @@ li{
 }
 
 /*----------Fin contenido---------------*/
+
+/*---------Tarjetas y descripcion--------*/
 
 
 
@@ -130,3 +134,14 @@ h6{
     font-weight: 700;
 }
 /*----------------Fin footer-----------------*/
+
+/*Media queris*/
+@include media-breakpoint-between(lg, xxl) { 
+
+    .navbar{
+        background-color: transparent !important;
+        position: absolute;
+
+    }
+
+}

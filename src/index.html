@@ -4,66 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=assets, initial-scale=1.0">
     <link rel="stylesheet" href="/public/styles/index.css">
-    
     <title>Easyequip</title>
 </head>
-<body class="">
-  <nav class="navbar navbar-expand-lg position-absolute  ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Easyequip</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Sobre nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-disabled="false">Contacto</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary rounded-2" type="submit">Search</button>
-        </form>
-      </div>
+<body>
+  <!-------------Barra de navegacion--------------->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary spa m-lg-3 ">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="#">EasyEquip</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+      <ul class="navbar-nav g ms-lg-5 mb-2 mb-lg-0">
+        <li class="nav-item me-lg-5">
+          <a class="nav-link active " aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item me-lg-5">
+          <a class="nav-link active" href="#">Sobre nosotros</a>
+        </li>
+        <li class="nav-item me-lg-5">
+          <a class="nav-link active" aria-disabled="false" href="#">Servicios</a>
+        </li>
+      </ul>
+    
     </div>
-  </nav>
+  </div>
+</nav>
   <!----Fin barra de navegacion----->
 
- <section class="  ">
-  <div><img class="img-fluid position-static" src="/public/assets/imagenes/imagen inicio.jpg" ></div>
+  <!-----------Imagen inicio--------->
+ <section class="mb-lg-5  ">
+  <div><img class="img-fluid " src="/public/assets/imagenes/imagen inicio.jpg" ></div>
  </section>
+ <!---------------------------------->
 
   <!--Inicio contenido-->
-    <main class="main container mt-3 ">
+    <main class="main container mt-lg-5">
       <!------section Texto bienvenida ------>
     <section class="main_section1">
       <div class="main_section1_div d-flex flex-column align-items-center mt-4" >
         <h4 class="main_section1_div_texto_titulo ">¡Bienvenido a EasyEquip!</h4>
         <h6 class="main_section1_div_texto_subtitulo text-center">"Soluciones rápidas y eficientes para la solicitud de materiales y software."</h6>
-        <button type="button" class="main_section1_div_texto_boton  btn btn-primary rounded-pill mt-4">Solicitar Ahora</button>
+        <div></div>
+        <a type="button" href="/src/login.html" class="main_section1_div_texto_boton  btn btn-primary rounded-pill mt-lg-5 mb-lg-5" >Solicitar Ahora</a>
       </div>
-      <!------------------Fin seccion texto------------------->
-
-      <div class="main_section1_imagen2"></div>
     </section>
     <!-----------------Fin Contenido----------------------->
 
-
+    <!--tarjetas y descripcion-->
     <section class="main_section2 mt-3">
-
-      <div><p class="main_section2_div_texto_descripcion text-center fs-6" >En EasyEquip, simplificamos el proceso de solicitud de materiales y software para empresas y profesionales. Nuestro sistema ágil y eficiente garantiza que obtengas lo que necesitas, cuando lo necesitas."</p></div>
-
+      <div class="justify-content-center d-flex"><p class="main_section2_div_texto_descripcion text-center fs-6 d-none d-sm-block w-50" >En EasyEquip, simplificamos el proceso de solicitud de materiales y software para empresas y profesionales. Nuestro sistema ágil y eficiente garantiza que obtengas lo que necesitas, cuando lo necesitas."</p></div>
       <!--div de tarjetas -->
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card bg-transparent">
-            <img class=" p-2" width="120px" height="120px" src="/public/assets/imagenes/icons8-services-100.png" alt="services"/>
+          <div class="card  bg-transparent ">
+            <div class="d-flex justify-content-center " ><img  width="120px" height="120px" src="/public/assets/imagenes/icons8-services-100.png" alt="services"/></div>
             <div class="card-body">
               <h5 class="card-title">Servicios Destacados</h5>
               <ul>
@@ -72,13 +67,15 @@
                 <li>Soporte técnico y seguimiento personalizado.</li>
                 <li>Gestión eficiente de pedidos.</li>
               </ul>
-               <button type="button" class="main_section1_div_texto_boton  btn btn-primary">Vermas</button>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent ">
-            <img src="/public/assets/imagenes/Ventajas.gif" class=" p-3" alt="Beneficios" style="height: 85px; width: 85px;">
+          <div class="card bg-transparent h-100  ">
+            <div class="d-flex justify-content-center p-3"><img src="/public/assets/imagenes/Ventajas.gif"  alt="Beneficios" style="height: 85px; width: 85px;"></div>
             <div class="card-body ">
               <h5 class="card-title">Beneficios</h5>
               <ul>
@@ -87,30 +84,34 @@
                 <li>Sistema intuitivo y amigable.</li>
                 <li>Seguridad en el manejo de tus pedidos.</li>
               </ul>
-              <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent ">
-            <img class=" p-3" width="85px" height="85px" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-benefits-productivity-flaticons-lineal-color-flat-icons.png" alt="external-benefits-productivity-flaticons-lineal-color-flat-icons"/> 
+          <div class="card bg-transparent h-100 ">
+            <div class="d-flex justify-content-center p-3"> <img style="width:80px; height:80px"  src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-benefits-productivity-flaticons-lineal-color-flat-icons.png" alt="external-benefits-productivity-flaticons-lineal-color-flat-icons"/> </div>
             <div class="card-body">
               <h5 class="card-title">Testimonios</h5>
               <ul>
                 <li>Opiniones de clientes satisfechos.</li>
               </ul>
-              <button type="button" class="main_section1_div_texto_boton  btn btn-primary ">Vermas</button>
+              <div class="d-flex justify-content-center ">
+                <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!--------Fin tarjetas------>
     </section>
   </main>
+  <!-----------------Fin tarjetas y descripcion------------>
 
-  <!--Pie de pagina-->
-  <footer class=" mt-4 ">
-    <div class="footer_informacion">
+  <!----------Pie de pagina-------------->
+  <footer class=" m-4  ">
+    <div class="footer_informacion ">
       <h6 class="toggle-button">Información de Contacto <span class="toggle-icon">+</span></h6>
       <ul class="toggle-content">
         <li>Easyequip2@gmail.com</li>
