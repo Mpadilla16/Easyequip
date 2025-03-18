@@ -11978,89 +11978,10 @@ textarea.form-control-lg {
   font-style: normal; /* Debe ser font-style y no font-family */
 }
 /*---------------------------------Fin importacion de fuentes------------------------------------------*/
-* {
-  margin: 0;
-}
-
 body {
-  background-color: rgb(232, 233, 240);
+  background-image: url(/public/assets/imagenes/Aprendiz.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-}
-
-/*-------------------Barra de navegacion--------------*/
-.navbar-brand {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 25px;
-}
-
-.nav-link {
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
-  color: rgb(8, 31, 56) !important;
-}
-
-/*-------------Fin barran de navegacion-------------------------*/
-/*----------Contenido texto----------*/
-.section_article_div_texto_titulo {
-  font-family: Montserrat;
-  color: #222F3E;
-  font-weight: 700;
-}
-
-.section_article_div_texto_subtitulo {
-  font-family: Montserrat;
-  color: #2D3436;
-  font-weight: 500;
-}
-
-h5, .h5 {
-  font-family: Montserrat;
-  color: #222F3E;
-  font-weight: 700;
-}
-
-li {
-  font-family: Nunito;
-  font: weight 600;
-  color: #2D3436;
-}
-
-[data-animation=fade] {
-  opacity: 0;
-  transform: translate(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: traslate(0);
-}
-
-[data-animation=show] {
-  opacity: 0;
-  transform: scale 0;
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: scale(1);
-}
-
-[data-animation=up] {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: translateY(0);
-}
-
-.unset {
-  opacity: var(--opacity);
-  transform: var(--transform);
-}
-
-/*----------Fin contenido---------------*/
-/*Media queris*/
-@media (min-width: 992px) and (max-width: 1399.98px) {
-  .navbar {
-    background-color: transparent !important;
-    position: absolute;
-  }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,33 @@
+// Importa solo los breakpoints de Bootstrap desde node_modules
+@import "~bootstrap/scss/bootstrap";
+
+
+
+//----------------------------------------Fuentes--------------------------//
+//monserrat
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/font/monserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Este rango cubre todos los pesos disponibles en la fuente variable */
+    font-style: normal;
+}
+
+
+//nunito
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/font/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
+    font-style: normal; /* Debe ser font-style y no font-family */
+}
+/*---------------------------------Fin importacion de fuentes------------------------------------------*/
+
+body{
+    background-image:url(/public/assets/imagenes/Aprendiz.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
