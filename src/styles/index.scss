@@ -4,19 +4,18 @@
 
 
 //----------------------------------------Fuentes--------------------------//
-//monserrat
+//Mitr
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../assets/font/monserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900; /* Este rango cubre todos los pesos disponibles en la fuente variable */
-    font-style: normal;
+    font-family: Mitr;
+    src: url('/public/assets/font/Mitr/Mitr-Regular.ttf') format('truetype');
+    font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
+    font-style: normal; /* Debe ser font-style y no font-family */
 }
 
-
-//nunito
+//Tenor
 @font-face {
-    font-family: 'Nunito';
-    src: url('../assets/font/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Tenor';
+    src: url('/public/assets/font/Tenor_Sans/TenorSans-Regular.ttf') format('truetype');
     font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
     font-style: normal; /* Debe ser font-style y no font-family */
 }
@@ -36,14 +35,14 @@ body {
 }
 /*-------------------Barra de navegacion--------------*/
 .navbar-brand{
-    font-family: Montserrat;
+    font-family: Mitr;
     font-weight: 700;
     font-size: 25px;
     
 }
 
 .nav-link{
-    font-family: Montserrat;
+    font-family: Tenor;
     font-weight:600;
     font-size: 16px;
     color: rgb(8, 31, 56) !important;
@@ -54,13 +53,13 @@ body {
 /*----------Contenido texto----------*/
 
 .section_article_div_texto_titulo{
-    font-family: Montserrat;
+    font-family: Mitr;
     color: #222F3E;
     font-weight: 700;
     
 }
 .section_article_div_texto_subtitulo{
-    font-family:Montserrat;
+    font-family: Tenor;
     color:#2D3436;
     font-weight:500;
 }
@@ -69,13 +68,13 @@ body {
 
 
 h5{
-    font-family:Montserrat;
+    font-family: Mitr;
     color:#222F3E;
     font-weight: 700;
 }
 
 li{
-    font-family: Nunito;
+    font-family: Tenor;
     font:weight 600;
     color:#2D3436;
 
