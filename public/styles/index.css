@@ -11966,22 +11966,18 @@ textarea.form-control-lg {
   }
 }
 @font-face {
-  font-family: Mitr;
-  src: url("/public/assets/font/Mitr/Mitr-Regular.ttf") format("truetype");
-  font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
-  font-style: normal; /* Debe ser font-style y no font-family */
+  font-family: "Mitr";
+  src: url("../assets/font/Mitr/Mitr-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 @font-face {
   font-family: "Tenor";
-  src: url("/public/assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
-  font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
-  font-style: normal; /* Debe ser font-style y no font-family */
+  src: url("../assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 /*---------------------------------Fin importacion de fuentes------------------------------------------*/
-* {
-  margin: 0;
-}
-
 body {
   background-color: rgb(232, 233, 240);
   height: 100vh;
