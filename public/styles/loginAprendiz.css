@@ -11965,19 +11965,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@font-face {
-  font-family: "Mitr";
-  src: url("/public/assets/font/Mitr/Mitr-Regular.ttf") format("truetype");
-  font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
-  font-style: normal; /* Debe ser font-style y no font-family */
-}
-@font-face {
-  font-family: "Tenor";
-  src: url("/public/assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
-  font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
-  font-style: normal; /* Debe ser font-style y no font-family */
-}
-/*---------------------------------Fin importacion de fuentes------------------------------------------*/
 body {
   background-color: rgb(232, 233, 240);
   height: 100vh;
@@ -11988,21 +11975,21 @@ body {
 }
 
 .main_section_form_article_subtitulo {
-  font-family: "Tenor";
+  font-family: "Tenor Sans";
 }
 
 .form-text {
   font-size: 9px;
-  font-family: "Tenor";
+  font-family: "Tenor Sans";
 }
 
 .form-label {
-  font-family: "Tenor";
+  font-family: "Tenor Sans";
 }
 
 p {
   font-size: 10px;
-  font-family: "Tenor";
+  font-family: "Tenor Sans";
 }
 
 a {
@@ -12011,7 +11998,7 @@ a {
 }
 
 .btn {
-  font-family: "Tenor";
+  font-family: "Tenor Sans";
 }
 
 .btn:hover {
