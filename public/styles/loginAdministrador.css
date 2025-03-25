@@ -11970,81 +11970,39 @@ body {
   height: 100vh;
 }
 
-/*-------------------Barra de navegacion--------------*/
-.navbar-brand {
+.main_section_form_article_titulo {
   font-family: "Mitr";
-  font-weight: 500;
-  font-size: 25px;
-  letter-spacing: 1px;
 }
 
-.nav-link {
+.main_section_form_article_subtitulo {
   font-family: "Tenor Sans";
-  font-weight: 400;
-  font-size: 16px;
-  color: rgb(8, 31, 56) !important;
 }
 
-/*-------------Fin barran de navegacion-------------------------*/
-/*----------Contenido texto----------*/
-.section_article_div_texto_titulo {
+.form-text {
+  font-size: 9px;
+  font-family: "Tenor Sans";
+}
+
+.form-label {
+  font-family: "Tenor Sans";
+}
+
+p {
+  font-size: 10px;
+  font-family: "Tenor Sans";
+}
+
+a {
+  font-size: 11px;
   font-family: "Mitr";
-  color: #222F3E;
-  font-weight: 700;
 }
 
-.section_article_div_texto_subtitulo {
+.btn {
   font-family: "Tenor Sans";
-  color: #2D3436;
-  font-weight: 300;
 }
 
-h5, .h5 {
-  font-family: "Mitr";
-  color: #222F3E;
-  font-weight: 700;
-}
-
-li {
-  font-family: "Tenor Sans";
-  font: weight 400;
-  color: #2D3436;
-}
-
-[data-animation=fade] {
-  opacity: 0;
-  transform: translate(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: traslate(0);
-}
-
-[data-animation=show] {
-  opacity: 0;
-  transform: scale 0;
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: scale(1);
-}
-
-[data-animation=up] {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: translateY(0);
-}
-
-.unset {
-  opacity: var(--opacity);
-  transform: var(--transform);
-}
-
-/*----------Fin contenido---------------*/
-/*Media queris*/
-@media (min-width: 992px) and (max-width: 1399.98px) {
-  .navbar {
-    background-color: transparent !important;
-    position: absolute;
-  }
-}/*# sourceMappingURL=index.css.map */
+.btn:hover {
+  background-color: rgb(78, 69, 204);
+  cursor: pointer; /* Añade un cursor pointer para mejor experiencia de usuario */
+  transition: background-color 0.3s; /* Suaviza la transición al cambiar el color */
+}/*# sourceMappingURL=loginAdministrador.css.map */
