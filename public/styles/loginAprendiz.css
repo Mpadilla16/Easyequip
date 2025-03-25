@@ -11967,13 +11967,13 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "Mitr";
-  src: url("../public/assets/font/Mitr/Mitr-Regular.ttf") format("truetype");
+  src: url("/public/assets/font/Mitr/Mitr-Regular.ttf") format("truetype");
   font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
   font-style: normal; /* Debe ser font-style y no font-family */
 }
 @font-face {
   font-family: "Tenor";
-  src: url("../public/assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
+  src: url("/public/assets/font/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
   font-weight: 100 900; /* Soporta todos los pesos de la fuente variable */
   font-style: normal; /* Debe ser font-style y no font-family */
 }
@@ -12010,12 +12010,12 @@ a {
   font-family: "Mitr";
 }
 
-button {
-  font-family: Tenor;
+.btn {
+  font-family: "Tenor";
 }
 
-button:hover {
-  background-color: rgb(12, 3, 151);
+.btn:hover {
+  background-color: rgb(78, 69, 204);
   cursor: pointer; /* Añade un cursor pointer para mejor experiencia de usuario */
   transition: background-color 0.3s; /* Suaviza la transición al cambiar el color */
 }/*# sourceMappingURL=loginAprendiz.css.map */
