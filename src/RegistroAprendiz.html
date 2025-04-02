@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <!--Fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <!--Fin fuentes-->
+  <link rel="stylesheet" href="../public/styles/RegistroAprendiz.css">
+  <title>Easyequip</title>
+</head>
+
+<body>
+
+  <form id="registroForm" class="container p-4 bg-light rounded shadow" novalidate>
+    <h2 class="mb-4 text-center">Registro de Aprendices</h2>
+  
+    <!-- Nombre Completo -->
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombres y Apellidos</label>
+      <input type="text" class="form-control" id="nombre" required>
+      <div class="invalid-feedback">El nombre solo debe contener letras y espacios.</div>
+    </div>
+  
+    <!-- Número de Identificación -->
+    <div class="mb-3">
+      <label for="identificacion" class="form-label">Número de Identificación</label>
+      <input type="text" class="form-control" id="identificacion" required>
+      <div class="invalid-feedback">Ingrese un número de identificación válido.</div>
+    </div>
+  
+    <!-- Correo Electrónico -->
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo Electrónico</label>
+      <input type="email" class="form-control" id="correo" required>
+      <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
+    </div>
+  
+    <!-- Teléfono -->
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Número de Teléfono</label>
+      <input type="tel" class="form-control" id="telefono" required>
+      <div class="invalid-feedback">El teléfono debe tener al menos 10 dígitos.</div>
+    </div>
+  
+    <!-- Programa de Formación -->
+    <div class="mb-3">
+      <label for="programa" class="form-label">Programa de Formación</label>
+      <select class="form-select" id="programa" required>
+        <option value="">Seleccione una opción</option>
+        <option value="desarrollo">Desarrollo Web</option>
+        <option value="redes">Redes y Sistemas</option>
+        <option value="diseño">Diseño Gráfico</option>
+      </select>
+      <div class="invalid-feedback">Seleccione un programa de formación.</div>
+    </div>
+  
+    <!-- Fecha de Nacimiento -->
+    <div class="mb-3">
+      <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" id="fechaNacimiento" required>
+      <div class="invalid-feedback">Ingrese una fecha de nacimiento válida.</div>
+    </div>
+  
+    <!-- Contraseña -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="password" required>
+      <div class="invalid-feedback">Debe contener mínimo 8 caracteres, una mayúscula, un número y un símbolo.</div>
+    </div>
+  
+    <!-- Confirmar Contraseña -->
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+      <input type="password" class="form-control" id="confirmPassword" required>
+      <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+    </div>
+  
+    <!-- Términos y Condiciones -->
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="terminos" required>
+      <label for="terminos" class="form-check-label">Acepto los términos y condiciones</label>
+      <div class="invalid-feedback">Debe aceptar los términos.</div>
+    </div>
+  
+    <!-- Botón de Enviar -->
+    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+  </form>
+  
+
+  <script src="/public/js/registro_aprendiz_val.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>

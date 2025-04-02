@@ -11968,41 +11968,4 @@ textarea.form-control-lg {
 body {
   background-color: rgb(232, 233, 240);
   height: 100vh;
-}
-
-.main_section_form_article_titulo {
-  font-family: "Mitr";
-}
-
-.main_section_form_article_subtitulo {
-  font-family: "Tenor Sans";
-}
-
-.form-text {
-  font-size: 9px;
-  font-family: "Tenor Sans";
-}
-
-.form-label {
-  font-family: "Tenor Sans";
-}
-
-p {
-  font-size: 10px;
-  font-family: "Tenor Sans";
-}
-
-a {
-  font-size: 11px;
-  font-family: "Mitr";
-}
-
-.btn {
-  font-family: "Tenor Sans";
-}
-
-.btn:hover {
-  background-color: rgb(78, 69, 204);
-  cursor: pointer; /* Añade un cursor pointer para mejor experiencia de usuario */
-  transition: background-color 0.3s; /* Suaviza la transición al cambiar el color */
-}/*# sourceMappingURL=loginAprendiz.css.map */
+}/*# sourceMappingURL=RegistroAprendiz.css.map */

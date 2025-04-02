@@ -60,6 +60,13 @@ li{
 
 }
 
+.linea {
+    border: none;
+    height: 1px;
+    background-color: rgb(178, 178, 228);
+    
+}
+
 [data-animation="fade"]{
     opacity: 0;
     transform: translate(100%);
