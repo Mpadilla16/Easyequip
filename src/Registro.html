@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <!--Fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <!--Fin fuentes-->
+  <link rel="stylesheet" href="../public/styles/Registro.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Easyequip</title>
+</head>
+
+<body class="vh-100">
+
+  <section class="mx-2 my-4 d-flex justify-content-center align-items-center">
+    <form id="registroForm" class="bg-white p-4 rounded shadow-sm form-container" novalidate>
+      <h2 class="text-center my-lg-4 my-4">Registro de Usuarios</h2>
+
+      <!-- Nombres y Apellidos -->
+      <div class="mb-3 mt-5 mt-lg-5">
+        <label for="nombre" class="form-label ">Nombres y Apellidos</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+          <input type="text" class="form-control" id="nombre" placeholder="Ej: Ana Gómez" required>
+          <div class="invalid-feedback">Solo letras y espacios.</div>
+        </div>
+      </div>
+
+
+      <!--Numero de identificacion-->
+      <div class="mb-3">
+        <label for="identificacion" class="form-label">Número de Identificación</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+          <input type="text" class="form-control" id="identificacion" placeholder="Ej: 1020304050" required>
+          <div class="invalid-feedback">Ingrese un número válido.</div>
+        </div>
+      </div>
+
+      <!--Correo electronico-->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo Electrónico</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
+          <input type="email" class="form-control" id="correo" placeholder="Ej: usuario@correo.com" required>
+          <div class="invalid-feedback">Correo inválido.</div>
+        </div>
+      </div>
+
+      <!--Telefono-->
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-telephone-fill"></i></i></span>
+          <input type="tel" class="form-control" id="telefono" placeholder="Ej: 000-000-00-00" required>
+          <div class="invalid-feedback">telefono no es valido</div>
+        </div>
+      </div>
+
+      <!--Fecha Nacimiento-->
+      <div class="mb-3">
+        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-calendar"></i></i></span>
+          <input type="date" class="form-control" id="fechaNacimiento" placeholder="Ej: 000-000-00-00" required>
+          <div class="invalid-feedback">Ingrese una fecha de nacimiento válida.</div>
+        </div>
+      </div>
+
+      <!-- Rol del usuario -->
+      <div class="mb-3">
+        <label for="rol" class="form-label">Rol</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-rolodex"></i></span>
+          <select class="form-select" id="rol" required>
+            <option value="Aprendiz">Aprendiz</option>
+            <option value="desarrollo">Instructor</option>
+            <option value="redes">Administrador</option>
+          </select>
+          <div class="invalid-feedback">Rol</div>
+        </div>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-building"></i></span>          
+          <input type="password" class="form-control" id="password" placeholder="Ingrese una Contraseña" required>
+          <div class="invalid-feedback">Debe contener mínimo 8 caracteres, una mayúscula, un número y un símbolo.</div>
+        </div>
+      </div>
+
+      <!-- Confirmar Contraseña -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-building-check"></i></span>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme su contraseña" required>
+          <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+        </div>
+
+      </div>
+
+      <!-- Términos y Condiciones -->
+      <div class=" mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terminos" required>
+        <label for="terminos" class="form-check-label">Acepto los términos y condiciones</label>
+        <div class="invalid-feedback">Debe aceptar los términos.</div>
+      </div>
+
+
+
+
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+      </div>
+    </form>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/public/js/registro_val.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
