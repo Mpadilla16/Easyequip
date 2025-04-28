@@ -11965,6 +11965,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  /* Text colors */
+  --color-text-primary: rgb(3, 43, 83);
+  --color-text-secondary: #0b3a64;
+  /* Primary Button */
+  --color-primary: #4F6DF5;
+  --color-primary-hover: #3B53C7;
+  --color-primary-focus: #5B78FF;
+  /* Secondary Button */
+  --color-secondary: #ADB5BD;
+  --color-secondary-hover: #8C939A;
+  --color-secondary-focus: #CED4DA;
+  /* Button text */
+  --color-button-text: #ffffff;
+}
+
 body {
   background-color: rgb(232, 233, 240);
   height: 100vh;
@@ -11975,82 +11991,77 @@ body {
   font-family: "Mitr";
   font-weight: 500;
   font-size: 25px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  color: var(--color-text-primary);
 }
 
 .nav-link {
   font-family: "Tenor Sans";
-  font-weight: 400;
   font-size: 16px;
-  color: rgb(8, 31, 56) !important;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Cambio de color al pasar el mouse sobre el enlace */
+.nav-link:hover {
+  color: var(--color-text-primary) !important; /* Cambia el color al color principal */
+  background-color: rgba(79, 109, 245, 0.1); /* Un ligero fondo azul claro */
+  border-radius: 0.5rem; /* Bordes ligeramente redondeados al pasar el mouse */
+}
+
+/* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
+.nav-link:focus {
+  color: var(--color-text-primary) !important; /* Igual que hover */
+  background-color: rgba(79, 109, 245, 0.2); /* Fondo un poco más intenso en focus */
+  outline: none; /* Quitar el borde feo de focus por defecto */
+  border-radius: 0.5rem;
+}
+
+.nav-button a {
+  display: inline-block; /* Para que se comporte como botón */
+  padding: 0.5rem 1.2rem; /* Espaciado interno */
+  background-color: var(--color-primary); /* Fondo usando tus variables */
+  border: none;
+  text-align: center;
+  text-decoration: none; /* Quitar subrayado */
+  transition: background-color 0.3s ease; /* Animación suave */
+}
+
+.nav-button a:hover {
+  background-color: var(--color-primary-hover); /* Color hover */
+}
+
+.nav-button a:focus {
+  background-color: var(--color-primary-focus); /* Color focus */
 }
 
 /*-------------Fin barran de navegacion-------------------------*/
-/*----------Contenido texto----------*/
-.section_article_div_texto_titulo {
-  font-family: "Mitr";
-  color: #222F3E;
-  font-weight: 700;
-}
-
-.section_article_div_texto_subtitulo {
+/*-----seccion bienvenida----*/
+.main_section_div_article_titulo {
+  color: var(--color-text-secondary);
   font-family: "Tenor Sans";
-  color: #2D3436;
-  font-weight: 300;
 }
 
-h5, .h5 {
+.main_section_div_article_subtitulo {
+  color: var(--color-primary-hover);
   font-family: "Mitr";
-  color: #222F3E;
-  font-weight: 700;
 }
 
-li {
+/*---seccion de servicios-----*/
+.section_servicios_article_titulo {
+  color: var(--color-text-primary);
+  font-family: "Mitr";
+}
+
+.section_servicios_article_subtitulo {
   font-family: "Tenor Sans";
-  font: weight 400;
-  color: #2D3436;
 }
 
-.linea {
-  border: none;
-  height: 1px;
-  background-color: rgb(178, 178, 228);
+.card-text, .card-title {
+  font-family: "Tenor Sans";
 }
 
-[data-animation=fade] {
-  opacity: 0;
-  transform: translate(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: traslate(0);
+.tarjeta-1 .tarjeta-2 .tarjeta-3 .tarjeta-4 {
+  background-color: var(--color-primary-hover);
 }
 
-[data-animation=show] {
-  opacity: 0;
-  transform: scale 0;
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: scale(1);
-}
-
-[data-animation=up] {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: 0.6s ease-in 0.3s;
-  --opacity:1;
-  --transform: translateY(0);
-}
-
-.unset {
-  opacity: var(--opacity);
-  transform: var(--transform);
-}
-
-/*----------Fin contenido---------------*/
-/*Media queris*/
-@media (min-width: 992px) and (max-width: 1399.98px) {
-  .navbar {
-    background-color: transparent !important;
-    position: absolute;
-  }
-}/*# sourceMappingURL=index.css.map */
+/*----------Fin contenido---------------*//*# sourceMappingURL=index.css.map */

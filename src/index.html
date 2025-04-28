@@ -3,133 +3,154 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-  <!--Fin fuentes-->
+
+  <!--Bootstrap Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- CSS-->
   <link rel="stylesheet" href="../public/styles/index.css">
+
   <title>Easyequip</title>
 </head>
 
+
 <body>
   <!-------------Barra de navegacion--------------->
-  <section class="section" data-animation="fade">
-    <nav class="navbar navbar-expand-lg  spa m-lg-3 ">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">EasyEquip</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid  ms-md-5">
+      <a class="navbar-brand" href="#">EasyEquip</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
-          <ul class="navbar-nav  ms-lg-5 mb-2 mb-lg-0">
-            <li class="nav-item me-lg-5">
-              <a class="nav-link active " aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item me-lg-5">
-              <a class="nav-link active" href="#">Sobre nosotros</a>
-            </li>
-            <li class="nav-item me-lg-5">
-              <a class="nav-link active" aria-disabled="false" href="#">Servicios</a>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse justify-content-md-end" id="navbarTogglerDemo02">
+        <ul class="navbar-nav   mb-2 mb-lg-0">
+          <li class="nav-item me-lg-5">
+            <a class="nav-link active  fw-bolder" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item me-lg-5">
+            <a class="nav-link active fw-bolder" href="#">Sobre nosotros</a>
+          </li>
+          <li class="nav-item me-lg-5">
+            <a class="nav-link active fw-bolder" aria-disabled="false" href="#">Servicios</a>
+          </li>
+          <li class="nav-button  me-lg-5">
+            <a class="active text-white fw-medium rounded rounded-3" aria-disabled="false" href="#">Iniciar Sesion</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="mb-lg-5 d-flex ">
-      <div><img class="img-fluid " src="../public/assets/imagenes/imagen inici.png"></div>
+
     </div>
-  </section>
+  </nav>
+  <!--------Fin barra de navegacion-------------->
 
-
-
-  <!--Inicio contenido-->
-  <section class="section container mt-lg-5" data-animation="show">
-    <article class="section_article">
-      <div class=" d-flex flex-column align-items-center mt-4">
-        <h4 class="section_article_div_texto_titulo ">¡Bienvenido a EasyEquip!</h4>
-        <h6 class="section_article_div_texto_subtitulo text-center">"Soluciones rápidas y eficientes para la solicitud
-          de
-          materiales y software."</h6>
-    </article>
-
-    
-
-
-    
-  </section>
-
-  <!--tarjetas-->
-  <section class="section container mt-3" data-animation="up" >
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card  bg-transparent ">
-          <div class="d-flex justify-content-center "><img width="120px" height="120px"
-              src="../public/assets/imagenes/icons8-services-100.png" alt="services" /></div>
-          <div class="card-body">
-            <h5 class="card-title">Servicios Destacados</h5>
-            <ul>
-              <li>Solicitud de materiales.</li>
-              <li>Adquisición de software.</li>
-              <li>Soporte técnico y seguimiento personalizado.</li>
-              <li>Gestión eficiente de pedidos.</li>
+  <main>
+    <!------Seccion de Bienvenida------->
+    <section class="container d-md-flex vh-100">
+      <div class="mt-md-4 mt-lg-4 mt-xxl-5">
+        <article class="me-lg-3 mt-lg-5 mt-xxl-5  ">
+          <h1 class="main_section_div_article_titulo fw-medium">¡Bienvenido a EasyEquip!</h1>
+          <p class="main_section_div_article_subtitulo fw-semibold mt-lg-3">Solicita materiales y software de forma
+            rápida y eficiente, impulsando tu aprendizaje.</p>
+          <p class="main_section_div_descripcion text-dark mt-lg-5 ">Nuestra plataforma intuitiva está diseñada para
+            conectar a aprendices, instructores y administradores, simplificando el acceso a los recursos esenciales
+            para una experiencia educativa completa y sin contratiempos.</p>
+          <div class="mt-lg-5">
+            <ul class="list-unstyled ">
+              <li class="nav-button "> <a class="active text-white fw-medium rounded rounded-3 fw-semibold"
+                  aria-disabled="false" href="#">Solicitar a hora</a></li>
             </ul>
-            <div class="d-flex justify-content-center">
-              <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="align-content-center">
+        <figure class="border border-1 border-primary ">
+          <img class="img-fluid" src="../public/assets/imagenes/Grupo 4.png" alt="imagen bienvenida">
+        </figure>
+      </div>
+    </section>
+    <!-----------Fin Bienvenida--------->
+
+
+    <!------- Seccion de Servicios-->
+    <section class=" container min-vh-100 border border-1 border-danger">
+      <div class="">
+        <article>
+          <h1 class="section_servicios_article_titulo text-center mt-2">Solicita, Recibe y Trabaja sin Complicaciones</h1>
+          <p class="section_servicios_article_subtitulo mt-3 mt-lg-4 text-secondary">Con EasyEquip, acceder a los equipos y materiales que necesitas es sencillo y rápido. Nuestro sistema de solicitud y entrega está diseñado para apoyarte en cada etapa,  asegurando que puedas enfocarte en lo que realmente importa: lograr tus objetivos.</p>
+        </article>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4  g-2 ">
+        <div class="col">
+          <div class=" card h-100 tarjeta_1">
+            <img src="../public/assets/imagenes/equipos.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Préstamo de Equipos Tecnológicos</h5>
+              <p class="card-text">Solicita dispositivos como laptops, tablets, cámaras y más para el desarrollo de tus
+                actividades académicas o laborales. EasyEquip te ofrece equipos actualizados, en excelente estado y
+                listos para usar, garantizando que puedas trabajar sin interrupciones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 tarjeta_2">
+            <img src="../public/assets/imagenes/solicitud.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Solicitud de Materiales</h5>
+              <p class="card-text">¿Necesitas materiales para tu proyecto o clase? Gestiona la solicitud de papelería,
+                herramientas, dispositivos y recursos de apoyo de manera rápida y sencilla. Nuestro sistema garantiza
+                disponibilidad y entrega oportuna.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 tarjeta_3">
+            <img src="../public/assets/imagenes/sofware y licencia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Software y Licencias</h5>
+              <p class="card-text">Accede a software especializado y licencias oficiales para tus trabajos de diseño,
+                programación, edición y más. Nos aseguramos de proporcionarte soluciones legales, actualizadas y
+                compatibles con tus necesidades.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 tarjeta_4">
+            <img src="../public/assets/imagenes/front-view-smiley-woman-listening-music-headphones.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Acceso Rápido y Sencillo</h5>
+              <p class="card-text">Nuestro portal de solicitudes está diseñado para ser ágil e intuitivo. En pocos pasos
+                podrás gestionar tus requerimientos de equipos o materiales, ahorrando tiempo y asegurando una
+                experiencia de usuario fluida.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card bg-transparent h-100  ">
-          <div class="d-flex justify-content-center p-3"><img src="../public/assets/imagenes/Ventajas.gif"
-              alt="Beneficios" style="height: 85px; width: 85px;"></div>
-          <div class="card-body ">
-            <h5 class="card-title">Beneficios</h5>
-            <ul>
-              <li>Rapidez en la solicitud y entrega.</li>
-              <li>Atención personalizada.</li>
-              <li>Sistema intuitivo y amigable.</li>
-              <li>Seguridad en el manejo de tus pedidos.</li>
-            </ul>
-            <div class="d-flex justify-content-center">
-              <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-transparent h-100 ">
-          <div class="d-flex justify-content-center p-3"> <img style="width:80px; height:80px"
-              src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-benefits-productivity-flaticons-lineal-color-flat-icons.png"
-              alt="external-benefits-productivity-flaticons-lineal-color-flat-icons" /> </div>
-          <div class="card-body">
-            <h5 class="card-title">Testimonios</h5>
-            <ul>
-              <li>Opiniones de clientes satisfechos.</li>
-            </ul>
-            <div class="d-flex justify-content-center ">
-              <button type="button" class="main_section1_div_texto_boton btn btn-primary  ">Vermas</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    <!-----Fin de seccion de servicios -------->
+  </main>
 
-  
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-   
-<script src="../public/js/main.js" ></script>
+
+  <script src="../public/js/main.js"></script>
 </body>
 
 </html>
