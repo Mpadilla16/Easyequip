@@ -5,109 +5,108 @@
     /* Text colors */
     --color-text-primary: rgb(3, 43, 83);
     --color-text-secondary: #0b3a64;
-  
+
     /* Primary Button */
     --color-primary: #4F6DF5;
     --color-primary-hover: #3B53C7;
     --color-primary-focus: #5B78FF;
-  
+
     /* Secondary Button */
     --color-secondary: #ADB5BD;
     --color-secondary-hover: #8C939A;
     --color-secondary-focus: #CED4DA;
-  
+
     /* Button text */
     --color-button-text: #ffffff;
-  }
-  
+}
+
 body {
     background-color: rgb(232, 233, 240);
     height: 100vh;
 }
+
 /*-------------------Barra de navegacion--------------*/
-.navbar-brand{
+.navbar-brand {
     font-family: 'Mitr';
     font-weight: 500;
     font-size: 25px;
     letter-spacing: 1.5px;
     color: var(--color-text-primary)
-    
 }
-.nav-link{
+
+.nav-link {
     font-family: 'Tenor Sans';
     font-size: 16px;
-    color: var(--color-text-secondary)!important;
+    color: var(--color-text-secondary) !important;
 }
+
 /* Cambio de color al pasar el mouse sobre el enlace */
 .nav-link:hover {
-    color: var(--color-text-primary) !important; /* Cambia el color al color principal */
-    background-color: rgba(79, 109, 245, 0.1); /* Un ligero fondo azul claro */
-    border-radius: 0.5rem; /* Bordes ligeramente redondeados al pasar el mouse */
+    color: var(--color-text-primary) !important;
+    /* Cambia el color al color principal */
+    background-color: rgba(79, 109, 245, 0.1);
+    /* Un ligero fondo azul claro */
+    border-radius: 0.5rem;
+    /* Bordes ligeramente redondeados al pasar el mouse */
 }
 
 /* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
 .nav-link:focus {
-    color: var(--color-text-primary) !important; /* Igual que hover */
-    background-color: rgba(79, 109, 245, 0.2); /* Fondo un poco más intenso en focus */
-    outline: none; /* Quitar el borde feo de focus por defecto */
-    border-radius: 0.5rem;   
+    color: var(--color-text-primary) !important;
+    /* Igual que hover */
+    background-color: rgba(79, 109, 245, 0.2);
+    /* Fondo un poco más intenso en focus */
+    outline: none;
+    /* Quitar el borde feo de focus por defecto */
+    border-radius: 0.5rem;
 }
 
 .nav-button a {
-    display: inline-block; /* Para que se comporte como botón */
-    padding: 0.5rem 1.2rem; /* Espaciado interno */
-    background-color: var(--color-primary); /* Fondo usando tus variables */
+    display: inline-block;
+    /* Para que se comporte como botón */
+    padding: 0.5rem 1.2rem;
+    /* Espaciado interno */
+    background-color: var(--color-primary);
+    /* Fondo usando tus variables */
     border: none;
-    
-    text-align: center;
-    text-decoration: none; /* Quitar subrayado */
-    transition: background-color 0.3s ease; /* Animación suave */
-  }
 
-  .nav-button a:hover {
-    background-color: var(--color-primary-hover); /* Color hover */
-  }
-  
-  .nav-button a:focus {
-    background-color: var(--color-primary-focus); /* Color focus */
-  }
+    text-align: center;
+    text-decoration: none;
+    /* Quitar subrayado */
+    transition: background-color 0.3s ease;
+    /* Animación suave */
+}
+
+.nav-button a:hover {
+    background-color: var(--color-primary-hover);
+    /* Color hover */
+}
+
+.nav-button a:focus {
+    background-color: var(--color-primary-focus);
+    /* Color focus */
+}
 
 /*-------------Fin barran de navegacion-------------------------*/
 
 /*-----seccion bienvenida----*/
 .main_section_div_article_titulo {
-    color:var(--color-text-secondary);
+    color: var(--color-text-secondary);
     font-family: 'Tenor Sans';
 }
 
 .main_section_div_article_subtitulo {
-    color: var(--color-primary-hover); 
+    color: var(--color-primary-hover);
     font-family: 'Mitr';
 }
 
 /*---seccion de servicios-----*/
-.section_servicios_article_titulo{
-    color: var(--color-text-primary);
-    font-family: 'Mitr';
+.seccion_banner{
+    background: #11678a;
+    background: linear-gradient(179deg, rgba(17, 103, 138, 1) 0%, rgba(77, 140, 189, 1) 50%, rgba(83, 165, 237, 1) 100%);
 }
-
-.section_servicios_article_subtitulo{
-    font-family: 'Tenor Sans';
-}
-
-.card-text, .card-title{
-    font-family: 'Tenor Sans';
-}
-.tarjeta-1
-.tarjeta-2
-.tarjeta-3
-.tarjeta-4{
-    background-color: var(--color-primary-hover);
-}
-
 
 
 
 
 /*----------Fin contenido---------------*/
-

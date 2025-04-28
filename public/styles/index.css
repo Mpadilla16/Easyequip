@@ -12003,35 +12003,48 @@ body {
 
 /* Cambio de color al pasar el mouse sobre el enlace */
 .nav-link:hover {
-  color: var(--color-text-primary) !important; /* Cambia el color al color principal */
-  background-color: rgba(79, 109, 245, 0.1); /* Un ligero fondo azul claro */
-  border-radius: 0.5rem; /* Bordes ligeramente redondeados al pasar el mouse */
+  color: var(--color-text-primary) !important;
+  /* Cambia el color al color principal */
+  background-color: rgba(79, 109, 245, 0.1);
+  /* Un ligero fondo azul claro */
+  border-radius: 0.5rem;
+  /* Bordes ligeramente redondeados al pasar el mouse */
 }
 
 /* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
 .nav-link:focus {
-  color: var(--color-text-primary) !important; /* Igual que hover */
-  background-color: rgba(79, 109, 245, 0.2); /* Fondo un poco más intenso en focus */
-  outline: none; /* Quitar el borde feo de focus por defecto */
+  color: var(--color-text-primary) !important;
+  /* Igual que hover */
+  background-color: rgba(79, 109, 245, 0.2);
+  /* Fondo un poco más intenso en focus */
+  outline: none;
+  /* Quitar el borde feo de focus por defecto */
   border-radius: 0.5rem;
 }
 
 .nav-button a {
-  display: inline-block; /* Para que se comporte como botón */
-  padding: 0.5rem 1.2rem; /* Espaciado interno */
-  background-color: var(--color-primary); /* Fondo usando tus variables */
+  display: inline-block;
+  /* Para que se comporte como botón */
+  padding: 0.5rem 1.2rem;
+  /* Espaciado interno */
+  background-color: var(--color-primary);
+  /* Fondo usando tus variables */
   border: none;
   text-align: center;
-  text-decoration: none; /* Quitar subrayado */
-  transition: background-color 0.3s ease; /* Animación suave */
+  text-decoration: none;
+  /* Quitar subrayado */
+  transition: background-color 0.3s ease;
+  /* Animación suave */
 }
 
 .nav-button a:hover {
-  background-color: var(--color-primary-hover); /* Color hover */
+  background-color: var(--color-primary-hover);
+  /* Color hover */
 }
 
 .nav-button a:focus {
-  background-color: var(--color-primary-focus); /* Color focus */
+  background-color: var(--color-primary-focus);
+  /* Color focus */
 }
 
 /*-------------Fin barran de navegacion-------------------------*/
@@ -12047,21 +12060,9 @@ body {
 }
 
 /*---seccion de servicios-----*/
-.section_servicios_article_titulo {
-  color: var(--color-text-primary);
-  font-family: "Mitr";
-}
-
-.section_servicios_article_subtitulo {
-  font-family: "Tenor Sans";
-}
-
-.card-text, .card-title {
-  font-family: "Tenor Sans";
-}
-
-.tarjeta-1 .tarjeta-2 .tarjeta-3 .tarjeta-4 {
-  background-color: var(--color-primary-hover);
+.seccion_banner {
+  background: #11678a;
+  background: linear-gradient(179deg, rgb(17, 103, 138) 0%, rgb(77, 140, 189) 50%, rgb(83, 165, 237) 100%);
 }
 
 /*----------Fin contenido---------------*//*# sourceMappingURL=index.css.map */
