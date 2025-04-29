@@ -12047,7 +12047,7 @@ body {
   /* Color focus */
 }
 
-/*-------------Fin barran de navegacion-------------------------*/
+/*----------------------------------------*/
 /*-----seccion bienvenida----*/
 .main_section_div_article_titulo {
   color: var(--color-text-secondary);
@@ -12059,10 +12059,68 @@ body {
   font-family: "Mitr";
 }
 
-/*---seccion de servicios-----*/
+/*--------------------------------------------------------------*/
+/*---seccion de marcas-----*/
 .seccion_banner {
   background: #11678a;
   background: linear-gradient(179deg, rgb(17, 103, 138) 0%, rgb(77, 140, 189) 50%, rgb(83, 165, 237) 100%);
 }
 
-/*----------Fin contenido---------------*//*# sourceMappingURL=index.css.map */
+.seccion_banner {
+  background-color: #222; /* solo si quieres fondo oscuro */
+}
+
+.seccion_banner img {
+  max-width: none; /* evita que img-fluid limite el ancho en scroll */
+}
+
+/*-----------------------------------------------------------------*/
+/*----------Seccion buscar----------*/
+.section_buscar_article_titulo {
+  font-family: "Tenor Sans";
+  color: var(--color-text-primary);
+}
+
+/* Grupo 1: laptops y escritorios normales (LG y XL) */
+@media (min-width: 992px) {
+  /*--Barra de navegacion--*/
+  .navbar-brand {
+    font-size: 1.86rem;
+  }
+  /*--Fin Barra de navegacion--*/
+  /*--Seccion de inicio--*/
+  .main_section_div_article_titulo {
+    font-size: 3.2rem;
+  }
+  .main_section_div_article_subtitulo {
+    font-size: 1.3rem;
+  }
+  .main_section_div_descripcion {
+    font-size: 1rem;
+  }
+}
+/* Grupo 2: pantallas muy grandes (XXL y 4K) */
+@media (min-width: 1400px) {
+  /*--Barra de navegacion--*/
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  /*--Fin Barra de navegacion--*/
+  /*--Seccion de inicio--*/
+  .main_section_div_article_titulo {
+    font-size: 4rem;
+  }
+  .main_section_div_article_subtitulo {
+    font-size: 1.8rem;
+  }
+  .main_section_div_descripcion {
+    font-size: 1.5rem;
+  }
+  .nav-button a {
+    font-size: 1.3rem;
+    margin-left: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */

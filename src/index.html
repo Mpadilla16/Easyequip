@@ -23,8 +23,8 @@
 
 <body>
   <!-------------Barra de navegacion--------------->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid  ms-md-5">
+  <nav class="navbar navbar-expand-lg border border-1 border-bottom border-secondary">
+    <div class="container-fluid ms-md-5">
       <a class="navbar-brand" href="#">EasyEquip</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
             <a class="nav-link active fw-bolder" aria-disabled="false" href="#">Servicios</a>
           </li>
           <li class="nav-button  me-lg-5">
-            <a class="active text-white fw-medium rounded rounded-3" aria-disabled="false" href="#">Iniciar Sesion</a>
+            <a class="active text-white fw-medium rounded rounded-3" aria-disabled="false" href="../src/login.html">Iniciar Sesion</a>
           </li>
         </ul>
       </div>
@@ -54,16 +54,16 @@
 
   <main>
     <!------Seccion de Bienvenida------->
-    <section class="container d-md-flex vh-100">
-      <div class="align-content-lg-center mt-md-4 mt-lg-4 mt-xxl-5">
-        <article class="me-lg-3 mt-lg-5 mt-xxl-5  ">
+    <section class="d-lg-flex vh-100 mx-2 mx-lg-3 pt-3 py-lg-5">
+      <div class="mx-lg-5  mt-4 mt-md-4 mt-lg-3">
+        <article class=" mt-lg-5 mt-xxl-5  ">
           <h1 class="main_section_div_article_titulo fw-medium">¡Bienvenido a EasyEquip!</h1>
           <p class="main_section_div_article_subtitulo fw-semibold mt-lg-3">Solicita materiales y software de forma
             rápida y eficiente, impulsando tu aprendizaje.</p>
-          <p class="main_section_div_descripcion text-dark mt-lg-5 ">Nuestra plataforma intuitiva está diseñada para
+          <p class="main_section_div_descripcion text-secondary mt-5 mt-lg-5 ">Nuestra plataforma intuitiva está diseñada para
             conectar a aprendices, instructores y administradores, simplificando el acceso a los recursos esenciales
             para una experiencia educativa completa y sin contratiempos.</p>
-          <div class="mt-lg-5">
+          <div class=" mt-5 mt-lg-5">
             <ul class="list-unstyled ">
               <li class="nav-button "> <a class="active text-white fw-medium rounded rounded-3 fw-semibold"
                   aria-disabled="false" href="#">Solicitar a hora</a></li>
@@ -72,8 +72,8 @@
         </article>
       </div>
 
-      <div class="align-content-center">
-        <figure class="border border-1 border-primary ">
+      <div class=" mt-5 mt-md-4 mt-lg-5  ">
+        <figure class="mt-3">
           <img class="img-fluid" src="../public/assets/imagenes/Grupo 4.png" alt="imagen bienvenida">
         </figure>
       </div>
@@ -81,20 +81,72 @@
     <!-----------Fin Bienvenida--------->
 
 
-    <!------- Seccion de Servicios-->
-    <section class="seccion_banner container-fluid">
-      <div class="border border-1 border-danger p-2 d-flex">
-        <div class="d-flex">
-          <i class="bi bi-laptop text-white"></i>
-          <h4 class="text-white">Laptop</h4>
+    <!-----Marcass-->
+    <section class="seccion_banner container-fluid mt-lg-5">
+      <div class="d-flex flex-nowrap justify-content-lg-center overflow-auto px-2">
+        
+        <!-- Windows -->
+        <div class="d-flex align-items-center gap-1  text-white p-2 me-3 flex-shrink-0">
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/windows-10.png" alt="windows-10"/>
+          <h4 class="mb-0">Windows</h4>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    
+        <!-- HP -->
+        <div class="d-flex align-items-center  p-2 me-3 flex-shrink-0">
+          <img class="img-fluid" width="60" height="60" src="../public/assets/imagenes/hp.png" alt="hp"/>
+        </div>
+    
+        <!-- Lenovo -->
+        <div class="d-flex align-items-center  p-2 me-3 flex-shrink-0">
+          <img class="img-fluid" width="80" height="80" src="../public/assets/imagenes/lenovo.png" alt="lenovo"/>
+        </div>
+    
+        <!-- Apple -->
+        <div class="d-flex align-items-center gap-1  text-white p-2 me-3 flex-shrink-0">
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/mac-os.png" alt="mac-os"/>
+          <h4 class="mb-0">Apple</h4>
+        </div>
+    
+        <!-- Epson -->
+        <div class="d-flex align-items-center  p-2 me-3 flex-shrink-0">
+          <img class="img-fluid" width="80" height="80" src="../public/assets/imagenes/Epson.png" alt="epson"/>
+        </div>
+    
+        <!-- Samsung -->
+        <div class="d-flex align-items-center  p-2 me-3 flex-shrink-0">
+          <img class="img-fluid" width="80" height="80" src="../public/assets/imagenes/Samsung.png" alt="Samsung"/>
+        </div>
+    
+        <!-- Xiaomi -->
+        <div class="d-flex align-items-center gap-1  text-white p-2 me-3 flex-shrink-0">
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/xiaomi.png" alt="xiaomi"/>
+          <h4 class="mb-0">Xiaomi</h4>
+        </div>
+    
+        <!-- Acer -->
+        <div class="d-flex align-items-center  p-2 me-3 flex-shrink-0">
+          <img class="img-fluid" width="100" height="100" src="../public/assets/imagenes/acer.png" alt="acer"/>
+        </div>
+    
       </div>
     </section>
-    <!-----Fin de seccion de servicios -------->
+    <!----Fin marcas----->
+
+    <section class="vh-100 mt-5">
+      <article class="text-center mx-2">
+        <h2 class="section_buscar_article_titulo fw-semibold">Buscar equipo</h2>
+        <form class="w-100 w-md-50 mx-auto mt-3">
+          <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Buscar equipo..." name="search">
+            <a class="btn nav-button" type="submit">
+              <i class="bi bi-search"></i> Buscar
+            </a>
+          </div>
+        </form>
+      </article>
+    </section>
+    
+    
   </main>
 
 
