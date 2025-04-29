@@ -119,8 +119,53 @@ body {
     font-family: 'Tenor Sans';
     color: var(--color-text-primary);
 }
+.nav-button_buscar{
+    display: inline-block;
+    /* Para que se comporte como botón */
+    padding: 0.5rem 1.2rem;
+    /* Espaciado interno */
+    background-color: var(--color-primary);
+    /* Fondo usando tus variables */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    /* Quitar subrayado */
+    transition: background-color 0.3s ease;
+    /* Animación suave */
+    font-family: "Tenor Sans";
+}
+.nav-button_buscar:hover {
+    background-color: var(--color-primary-hover);
+    /* Color hover */
+}
+.nav-button_buscar:focus {
+    background-color: var(--color-primary-focus);
+    /* Color focus */
+}
+h5 span {
+    color: var(--color-primary-hover);
+    font-weight: 600;
+    font-family: "Mitr";
+}
+div h5{
+    font-family: "Mitr";
+    color: var(--color-text-secondary);
+}
 
+li img{
+    width: 60px;
+    height: 60px;
+}
+li div h6{
+    color: var(--color-text-primary);
+    font-family: "Mitr";
 
+}
+li div p{
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-family: "Tenor Sans";
+}
 
 
 
