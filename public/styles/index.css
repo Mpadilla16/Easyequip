@@ -12151,6 +12151,13 @@ li div p {
   .main_section_div_descripcion {
     font-size: 1rem;
   }
+  /*-----------------------------*/
+  /*---Seccion de buscar rescursos---*/
+  .section_buscar_article_titulo {
+    font-family: "Tenor Sans";
+    color: var(--color-text-primary);
+    font-size: 2rem;
+  }
 }
 /* Grupo 2: pantallas muy grandes (XXL y 4K) */
 @media (min-width: 1400px) {

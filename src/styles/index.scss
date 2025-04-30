@@ -155,6 +155,7 @@ div h5{
 li img{
     width: 60px;
     height: 60px;
+
 }
 li div h6{
     color: var(--color-text-primary);
@@ -189,6 +190,14 @@ li div p{
     .main_section_div_descripcion {
         font-size: 1rem;
 
+    }
+    /*-----------------------------*/
+
+    /*---Seccion de buscar rescursos---*/
+    .section_buscar_article_titulo{
+        font-family: 'Tenor Sans';
+        color: var(--color-text-primary);
+        font-size: 2rem;
     }
    
   }
