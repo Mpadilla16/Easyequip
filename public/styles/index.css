@@ -12064,8 +12064,7 @@ body {
 
 /*--------------------------------------------------------------*/
 /*---seccion de marcas-----*/
-.seccion_banner,
-.seccion_populares {
+.seccion_banner {
   background: #11678a;
   background: linear-gradient(179deg, rgb(17, 103, 138) 0%, rgb(77, 140, 189) 50%, rgb(83, 165, 237) 100%);
 }
