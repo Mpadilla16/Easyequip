@@ -11990,7 +11990,7 @@ body {
 .navbar-brand {
   font-family: "Mitr";
   font-weight: 500;
-  font-size: 25px;
+  font-size: 23px;
   letter-spacing: 1.5px;
   color: var(--color-text-primary);
 }
@@ -12011,6 +12011,13 @@ body {
   /* Bordes ligeramente redondeados al pasar el mouse */
 }
 
+.navbar-brand:hover {
+  color: var(--color-text-primary) !important;
+  background-color: rgba(79, 109, 245, 0.1);
+  border-radius: 0.5rem;
+  padding: 5px;
+}
+
 /* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
 .nav-link:focus {
   color: var(--color-text-primary) !important;
@@ -12024,15 +12031,11 @@ body {
 
 .nav-button a {
   display: inline-block;
-  /* Para que se comporte como botón */
   padding: 0.5rem 1.2rem;
-  /* Espaciado interno */
   background-color: var(--color-primary);
-  /* Fondo usando tus variables */
   border: none;
   text-align: center;
   text-decoration: none;
-  /* Quitar subrayado */
   transition: background-color 0.3s ease;
   /* Animación suave */
 }
@@ -12068,11 +12071,13 @@ body {
 }
 
 .seccion_banner {
-  background-color: #222; /* solo si quieres fondo oscuro */
+  background-color: #222;
+  /* solo si quieres fondo oscuro */
 }
 
 .seccion_banner img {
-  max-width: none; /* evita que img-fluid limite el ancho en scroll */
+  max-width: none;
+  /* evita que img-fluid limite el ancho en scroll */
 }
 
 /*-----------------------------------------------------------------*/
@@ -12084,17 +12089,12 @@ body {
 
 .nav-button_buscar {
   display: inline-block;
-  /* Para que se comporte como botón */
   padding: 0.5rem 1.2rem;
-  /* Espaciado interno */
   background-color: var(--color-primary);
-  /* Fondo usando tus variables */
   border: none;
   text-align: center;
   text-decoration: none;
-  /* Quitar subrayado */
   transition: background-color 0.3s ease;
-  /* Animación suave */
   font-family: "Tenor Sans";
 }
 
@@ -12135,7 +12135,7 @@ li div p {
   font-family: "Tenor Sans";
 }
 
-/* Grupo 1: laptops y escritorios normales (LG y XL) */
+/*Estilos para tamanos de pantallas lg en adelante*/
 @media (min-width: 992px) {
   /*--Barra de navegacion--*/
   .navbar-brand {
@@ -12161,27 +12161,35 @@ li div p {
   }
 }
 /* Grupo 2: pantallas muy grandes (XXL y 4K) */
-@media (min-width: 1400px) {
-  /*--Barra de navegacion--*/
-  .navbar-brand {
+/*@media (min-width: 1400px) {
+
+    /*--Barra de navegacion--*/
+/* .navbar-brand {
     font-size: 1.8rem;
-  }
-  .nav-link {
+}
+
+.nav-link {
     font-size: 1.2rem;
-  }
-  /*--Fin Barra de navegacion--*/
-  /*--Seccion de inicio--*/
-  .main_section_div_article_titulo {
-    font-size: 4rem;
-  }
-  .main_section_div_article_subtitulo {
-    font-size: 1.8rem;
-  }
-  .main_section_div_descripcion {
-    font-size: 1.5rem;
-  }
-  .nav-button a {
-    font-size: 1.3rem;
-    margin-left: 15px;
-  }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*--Fin Barra de navegacion--*/
+/*--Seccion de inicio--*/
+/*.main_section_div_article_titulo {
+        font-size: 4rem;
+    }
+
+    .main_section_div_article_subtitulo {
+        font-size: 1.8rem;
+    }
+
+    .main_section_div_descripcion {
+        font-size: 1.5rem;
+
+    }
+
+    .nav-button a {
+        font-size: 1.3rem;
+        margin-left: 15px;
+    }
+
+} *//*# sourceMappingURL=index.css.map */

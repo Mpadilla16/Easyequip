@@ -1,16 +1,96 @@
 @import "~bootstrap/scss/bootstrap";
 
+:root {
+  /* Text colors */
+  --color-text-primary: rgb(3, 43, 83);
+  --color-text-secondary: #0b3a64;
+
+  /* Primary Button */
+  --color-primary: #4F6DF5;
+  --color-primary-hover: #3B53C7;
+  --color-primary-focus: #5B78FF;
+
+  /* Secondary Button */
+  --color-secondary: #ADB5BD;
+  --color-secondary-hover: #8C939A;
+  --color-secondary-focus: #CED4DA;
+
+  /* Button text */
+  --color-button-text: #ffffff;
+}
+
 body {
-  background-color: #f3f4f7;
+  background-color: rgb(232, 233, 240);
+  height: 100vh;
   font-family: 'Tenor Sans', sans-serif;
 }
+
+/*-------------------Barra de navegacion--------------*/
+.navbar-brand {
+  font-family: 'Mitr';
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+  color: var(--color-text-primary)
+}
+
+.nav-link {
+  font-family: 'Tenor Sans';
+  font-size: 16px;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Cambio de color al pasar el mouse sobre el enlace */
+.nav-link:hover {
+  color: var(--color-text-primary) !important;
+  background-color: rgba(79, 109, 245, 0.1);
+  border-radius: 0.5rem;
+}
+.navbar-brand:hover{
+  color: var(--color-text-primary) !important;
+  background-color: rgba(79, 109, 245, 0.1);
+  border-radius: 0.5rem;
+  padding: 5px;
+}
+/* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
+.nav-link:focus {
+  color: var(--color-text-primary) !important;
+  background-color: rgba(79, 109, 245, 0.2);
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.nav-button a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--color-primary);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+}
+
+.nav-button a:hover {
+  background-color: var(--color-primary-hover);
+  /* Color hover */
+}
+
+.nav-button a:focus {
+  background-color: var(--color-primary-focus);
+  /* Color focus */
+}
+
+/*----------------------------------------*/
+
+
 
 h2 {
   font-family: 'Mitr', sans-serif;
   color: #2a2a2a;
 }
 
-.form-label{
+.form-label {
   font-size: 1rem;
 }
 
@@ -46,6 +126,7 @@ input::placeholder {
   color: #d9534f;
 }
 
+/*Estilos para tamanos de pantallas lg en adelante*/
 @include media-breakpoint-up(lg) {
   form {
     padding: 1.5rem !important;
@@ -55,6 +136,11 @@ input::placeholder {
     font-size: 16px;
   }
 
-  
- 
+  /*navbar*/
+    .navbar-brand {
+        font-size: 1.86rem;
+    }
+
+
+
 }

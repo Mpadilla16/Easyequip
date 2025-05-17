@@ -1,14 +1,89 @@
 // Importa solo los breakpoints de Bootstrap desde node_modules
 @import "~bootstrap/scss/bootstrap";
 
+:root {
+    /* Text colors */
+    --color-text-primary: rgb(3, 43, 83);
+    --color-text-secondary: #0b3a64;
 
+    /* Primary Button */
+    --color-primary: #4F6DF5;
+    --color-primary-hover: #3B53C7;
+    --color-primary-focus: #5B78FF;
 
+    /* Secondary Button */
+    --color-secondary: #ADB5BD;
+    --color-secondary-hover: #8C939A;
+    --color-secondary-focus: #CED4DA;
 
+    /* Button text */
+    --color-button-text: #ffffff;
+}
 body{
     background-color: rgb(232, 233, 240);
     height: 100vh;
+    font-family:'Tenor Sans';
     
 }
+/*-------------------Barra de navegacion--------------*/
+.navbar-brand {
+    font-family: 'Mitr';
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 1.5px;
+    color: var(--color-text-primary)
+}
+
+.nav-link {
+    font-family: 'Tenor Sans';
+    font-size: 16px;
+    color: var(--color-text-secondary) !important;
+}
+
+/* Cambio de color al pasar el mouse sobre el enlace */
+.nav-link:hover {
+    color: var(--color-text-primary) !important;
+    background-color: rgba(79, 109, 245, 0.1);
+    border-radius: 0.5rem;
+}
+
+.navbar-brand:hover {
+    color: var(--color-text-primary) !important;
+    background-color: rgba(79, 109, 245, 0.1);
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+/* Cambio de color cuando el enlace recibe focus (por ejemplo con teclado) */
+.nav-link:focus {
+    color: var(--color-text-primary) !important;
+    background-color: rgba(79, 109, 245, 0.2);
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+.nav-button a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color-primary);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* Animación suave */
+}
+
+.nav-button a:hover {
+    background-color: var(--color-primary-hover);
+    /* Color hover */
+}
+
+.nav-button a:focus {
+    background-color: var(--color-primary-focus);
+    /* Color focus */
+}
+/*--------------------------------------------*/
+
 
 .main_section_form_article_titulo{
     font-family:'Mitr';
@@ -17,22 +92,17 @@ body{
 .main_section_form_article_subtitulo{
     font-family:'Tenor Sans';
 }
-
 .form-text{
     font-size: 9px;
     font-family: 'Tenor Sans';
 }
-
 .form-label{
-    font-family:'Tenor Sans';
-    
+    font-family:'Tenor Sans';   
 }
-
 p{
     font-size:10px;
     font-family: 'Tenor Sans';
 }
-
 a{
     font-size: 11px;
     font-family: 'Mitr';
@@ -49,5 +119,11 @@ a{
     transition: background-color 0.3s; /* Suaviza la transición al cambiar el color */
 }
 
+/*Estilos para tamanos de pantallas lg en adelante*/
+@include media-breakpoint-up(lg) {
+    .navbar-brand {
+        font-size: 1.86rem;
+    }
+}
 
 
