@@ -12134,6 +12134,16 @@ li div p {
   font-family: "Tenor Sans";
 }
 
+.seccion_populares article h3, .seccion_populares article .h3 {
+  font-family: "Mitr";
+  color: var(--color-text-primary);
+}
+
+.seccion_populares article p {
+  font-family: "Tenor Sans";
+  color: var(--color-text-secondary);
+}
+
 /*Estilos para tamanos de pantallas lg en adelante*/
 @media (min-width: 992px) {
   /*--Barra de navegacion--*/

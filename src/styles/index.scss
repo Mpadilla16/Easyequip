@@ -178,6 +178,17 @@ li div p {
     font-family: "Tenor Sans";
 }
 
+//seccion de porductos populares
+
+.seccion_populares article h3{
+    font-family:  "Mitr" ;
+    color: var(--color-text-primary);
+}
+.seccion_populares article p{
+    font-family: "Tenor Sans";
+    color: var(--color-text-secondary);
+}
+
 
 
 /*Estilos para tamanos de pantallas lg en adelante*/
