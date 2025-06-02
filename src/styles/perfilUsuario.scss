@@ -1,0 +1,145 @@
+// Importa solo los breakpoints de Bootstrap desde node_modules
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    /* Text colors */
+    --color-text-primary: rgb(3, 43, 83);
+    --color-text-secondary: #0b3a64;
+
+    /* Primary Button */
+    --color-primary: #4F6DF5;
+    --color-primary-hover: #3B53C7;
+    --color-primary-focus: #5B78FF;
+
+    /* Secondary Button */
+    --color-secondary: #ADB5BD;
+    --color-secondary-hover: #8C939A;
+    --color-secondary-focus: rgba(79, 109, 245, 0.2);
+
+    /* Button text */
+    --color-button-text: #ffffff;
+
+}
+
+
+body {
+    background-color: rgb(232, 233, 240);
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box !important;
+}
+
+header {
+    background-color: rgb(232, 233, 240);
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/*Menu*/
+.menu-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu div{
+    width: 100%;
+}
+
+
+/*Seccion izquierda del header*/
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+.brand {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.brand .name{
+    font-family: 'Mitr';
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 1.5px;
+    color: var(--color-text-primary)
+    
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+.right img{
+    width: 1.5rem;
+    margin: 0.5rem;
+}
+.right .user{
+    width: 2.1rem;
+    border-radius: 50%;
+}
+.right a {
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2 ease;
+    padding: 0.5rem;
+
+}
+.right a:hover,
+.sidebar a:hover{
+    background-color: var(--color-secondary-focus);
+}
+/*Sidebar*/
+.sidebar{
+
+    margin-top: 4rem;
+    width: 4rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1.1rem 0;
+    overflow-y: auto; 
+    transition:width 0.3s ease; 
+}
+.sidebar.menu-toggle{
+    width: 18.75rem;
+}
+.sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--color-text-primary);
+}
+
+.seleccionado{
+    background-color:  rgba(208, 209, 209, 0.445) ;
+    
+}
