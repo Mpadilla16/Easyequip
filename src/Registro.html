@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +86,7 @@
         <div class="col-12 col-lg-6 mb-3">
           <label for="telefono" class="form-label">Telefono</label>
           <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-telephone-fill"></i></i></span>
+            <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
             <input type="tel" class="form-control" id="telefono" placeholder="Ej: 000-000-00-00" required>
             <div class="invalid-feedback">telefono no es valido</div>
           </div>
@@ -96,7 +96,7 @@
         <div class="col-12 col-lg-6 mb-3">
           <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
           <div class="input-group">
-            <span class="input-group-text"><i class="bi bi-calendar"></i></i></span>
+            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
             <input type="date" class="form-control" id="fechaNacimiento" placeholder="Ej: 000-000-00-00" required>
             <div class="invalid-feedback">Ingrese una fecha de nacimiento válida.</div>
           </div>
@@ -107,9 +107,9 @@
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-person-rolodex"></i></span>
             <select class="form-select" id="rol" required>
-              <option value="Aprendiz">Aprendiz</option>
-              <option value="desarrollo">Instructor</option>
-              <option value="redes">Administrador</option>
+              <option value="1">Aprendiz</option>
+              <option value="2">Instructor</option>
+              <option value="3">Tecnico</option>
             </select>
             <div class="invalid-feedback">Rol</div>
           </div>
@@ -143,7 +143,7 @@
         <div class="invalid-feedback">Debe aceptar los términos.</div>
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <button id="registrar" type="submit" class="btn btn-primary">Registrar</button>
       </div>
     </form>
   </section>
@@ -163,7 +163,7 @@
 
 
   
-
+  <script src="../js/postUsuario.js"></script><!--Metodo de validacion de formulario-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script><!--Script de boostrap-->
