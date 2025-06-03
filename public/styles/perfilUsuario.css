@@ -12076,6 +12076,7 @@ header {
 
 /*Sidebar*/
 .sidebar {
+  background-color: rgb(232, 233, 240);
   margin-top: 4rem;
   width: 4rem;
   height: 100%;
@@ -12107,4 +12108,30 @@ header {
 
 .seleccionado {
   background-color: rgba(208, 209, 209, 0.445);
+}
+
+/*main*/
+main {
+  margin-top: 3rem;
+  margin-left: 4rem;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+}
+
+main.menu-toggle {
+  margin-left: 18.75rem;
+}
+
+/*Estilos responsivos*/
+@media (max-width: 500px) {
+  .sidebar {
+    width: 0;
+    margin-top: 3.2rem;
+  }
+  main {
+    margin-left: 0;
+  }
+  main.menu-toggle {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=perfilUsuario.css.map */
