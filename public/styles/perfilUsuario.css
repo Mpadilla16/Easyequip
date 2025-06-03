@@ -11995,7 +11995,6 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0.45rem 2rem 0.45rem 1.27rem;
-  position: fixed;
   top: 0;
   left: 0;
 }
@@ -12112,7 +12111,7 @@ header {
 
 /*main*/
 main {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-left: 4rem;
   padding: 2rem;
   transition: margin-left 0.3s ease;
