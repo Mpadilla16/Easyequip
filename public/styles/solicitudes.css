@@ -12121,6 +12121,16 @@ main.menu-toggle {
   margin-left: 18.75rem;
 }
 
+/*Estilos para el contenido del main*/
+/*card del dashboard*/
+.card-1 {
+  background-color: #c9ecd0;
+}
+
+.card-2 {
+  background-color: #e0c2bc;
+}
+
 /*Estilos responsivos*/
 @media (max-width: 500px) {
   .sidebar {
