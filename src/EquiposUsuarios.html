@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
   <!--Fin fuentes-->
-  <link rel="stylesheet" href="../public/styles/perfilUsuario.css">
+  <link rel="stylesheet" href="../public/styles/equiposUsuarios.css"> <!--Hoja de Estilos-->
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
-  <title>Easyequip</title>
+  <title>Equipos</title>
 </head>
 
 <body>
@@ -47,13 +47,13 @@
     <nav>
       <ul class="list-unstyled">
         <li>
-          <a href="#" class="seleccionado">
+          <a href="../src/perfilUsuario.html">
             <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
             <span>Inicio</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="../src/solicitudesUsuarios.html">
             <i class='bx  bx-picture-in-picture-close bx-sm'></i>
             <span>Solicitudes</span>
           </a>
@@ -65,7 +65,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="../src/EquiposUsuarios.html" class="seleccionado">
             <i class='bx  bx-laptop bx-sm'></i>
             <span>Equipos</span>
           </a>
@@ -73,7 +73,7 @@
         <li>
           <a href="#">
             <i class='bx  bx-user-circle bx-sm'></i>
-            <span>Perfil</span>
+            <span>Cuenta</span>
           </a>
         </li>
 
@@ -97,15 +97,45 @@
 
 
   <main id="main">
-
-    <section class="w-100">
-      
-
-      
-
-      
-
+    <!--Banner-->
+    <section>
     </section>
+
+    <!--Dashboard-->
+    <section class="dashboard">
+      <div>
+        <h3>Equipos Tecnológicos Disponibles</h3>
+        <p>Consulta y gestiona los equipos disponibles para préstamo o uso institucional.</p>
+      </div>
+    </section>
+
+    <section class="container py-4">
+  <div class="row justify-content-center">
+    <!-- Tarjeta ejemplo -->
+    <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Texto de ejemplo para mostrar descripción del equipo.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Item 1</li>
+          <li class="list-group-item">Item 2</li>
+          <li class="list-group-item">Item 3</li>
+        </ul>
+        <div class="card-body d-flex justify-content-center">
+          <button class="solicitar-button  text-white fw-medium rounded " >Solicitar</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repite más tarjetas aquí -->
+  </div>
+</section>
+
+
+
+
 
 
 

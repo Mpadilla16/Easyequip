@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <!--Fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <!--Fin fuentes-->
+  <link rel="stylesheet" href="../public/styles/solicitudesUsuarios.css"> <!--Hoja de Estilo-->
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+  <title>Easyequip Solicitudes-Usuario</title>
+</head>
+
+<body>
+  <header class="navbar position-fixed border border-1 border-bottom border-opacity-25 border-secondary">
+    <div class="container-fluid d-flex w-100">
+      <!-- Marca y botón de menú lateral -->
+      <div class="d-flex align-items-center">
+        <div class="menu-container d-flex align-items-center me-2">
+          <div class="menu d-flex" id="menu-btn">
+            <i class='bx bx-menu-wide bx-md'></i>
+            <i class='bx bxs-arrow-right-stroke bx-md d-none'></i>
+          </div>
+        </div>
+        <div class="brand">
+          <span class="name">Easyequip</span>
+        </div>
+      </div>
+      <div class="right ">
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle bx-sm'></i></a>
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i></a>
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-bell-ring bx-sm'></i></a>
+        <img src="../public/assets/imagenes/woman-standing-working-her-tablet.jpg" class="user">
+      </div>
+    </div>
+  </header>
+
+
+  <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
+    <nav>
+      <ul class="list-unstyled">
+        <li>
+          <a href="../src/InicioUsuario.html">
+            <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="../src/solicitudesUsuarios.html" class="seleccionado">
+            <i class='bx  bx-picture-in-picture-close bx-sm'></i>
+            <span>Solicitudes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-history bx-sm'></i>
+            <span>Historial</span>
+          </a>
+        </li>
+        <li>
+          <a href="../src/EquiposUsuarios.html">
+            <i class='bx  bx-laptop bx-sm'></i>
+            <span>Equipos</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-user-circle bx-sm'></i>
+            <span>Cuenta</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <!--Opciones para el usuaruio-->
+      <ul class="list-unstyled d-lg-none border-1 border-top  border-secondary border-opacity-25 ">
+        <li>
+          <a href="#"><i class='bx bx-message-circle bx-sm'></i> <span>Mensajes</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-bell-ring bx-sm'></i> <span>Notificaciones</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i><span>Ayuda</span></a>
+        </li>
+      </ul>
+    </nav>
+
+  </section>
+
+
+  <main id="main">
+    <!--Banner-->
+    <section>
+    </section>
+
+    <!--Dashboard-->
+    <section class="dashboard">
+      <div>
+        <h3>Resumen general de solicitudes</h3>
+        <p>Visualiza el estado actual del sistema de solicitudes y accede rapidamente a las acciones mas importantes</p>
+      </div>
+
+
+      
+
+
+    </section>
+
+
+    <!--Tabla informacion de solicitud-->
+    <section class=" ">
+      <table class="table table-hover table-responsive w-auto">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Fecha solicitud</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">341234</td>
+            <td>04-abril-2025</td>
+            <td>Pendiente</td>
+            <td><a>Detalles solicitud</a></td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </section>
+
+
+
+  </main>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="../public/js/Sidebar.js"></script>
+
+
+</body>
+
+</html>
