@@ -97,22 +97,22 @@
 
 
   <main id="main">
-  
 
-    <!--Dashboard-->
+
+    <!--Encabezado-->
     <section class="encabezado">
       <div>
         <h1 class="fw-medium">Gestión de Solicitudes de Equipos</h1>
-        <p>Aquí podrás visualizar y gestionar las solicitudes realizadas por los usuarios, incluyendo su estado y los equipos requeridos</p>
+        <p>Aquí podrás visualizar y gestionar las solicitudes realizadas por los usuarios, incluyendo su estado y los
+          equipos requeridos</p>
       </div>
     </section>
 
-    <section class=" bg-light border border-1 border-secondary border-opacity-25 rounded-1 shadow py-4 px-4  my-4">
+    <!--Dashboard-->
+    <section class=" bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4">
       <div>
         <h5>Resumen General de Solicitudes</h5>
-        
       </div>
-
       <div class="my-4">
         <div class=" d-flex  flex-column flex-lg-row  gap-2 gap-lg-3">
 
@@ -137,7 +137,8 @@
               <p class="text-dark mb-0 fw-semibold fs-6">3 dias</p>
             </article>
             <div class="d-flex flex-column justify-content-between">
-              <div class="circle-card-2 p-2 rounded-2"><i class='bxr  bx-hourglass bx-sm text-warning align-self-center'  ></i> 
+              <div class="circle-card-2 p-2 rounded-2"><i
+                  class='bxr  bx-hourglass bx-sm text-warning align-self-center'></i>
               </div>
               <i class='bx bx-right-arrow-alt fs-3'></i>
             </div>
@@ -152,7 +153,7 @@
             </article>
             <div class="d-flex flex-column justify-content-between">
               <div class="circle-card-3 p-2 rounded-2 d-flex ">
-                <i class='bxr  bx-dislike bx-sm align-self-center text-danger' ></i> 
+                <i class='bxr  bx-dislike bx-sm align-self-center text-danger'></i>
               </div>
               <i class='bx bx-right-arrow-alt fs-3'></i>
             </div>
@@ -188,7 +189,7 @@
             </div>
           </div>
         </div>
-        <p>Visualiza el estado actual del sistema de solicitudes y accede rápidamente a las acciones más importantes</p>
+        <p>accede rápidamente a la informacion más importantes</p>
 
       </div>
 
@@ -196,43 +197,70 @@
     </section>
 
 
-    
-    <section class=" ">
+
+    <section
+      class="d-md-flex justify-content-between bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4 ">
       <!--Tabla de solicitud-->
       <div>
-        <table class="table  table-responsive w-auto">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Fecha solicitud</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Acciones</th>
-            <th scope="col">Botones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">341234</td>
-            <td>04-abril-2025</td>
-            <td>Pendiente</td>
-            <td>
-              <a href="#">Detalles solicitud</a>
-            </td>
-            <th><button type="button" class="btn btn-danger">Eliminar</button>
-              <button type="button" class="btn btn-warning ">Actulizar</button>
-            </th>
-          </tr>
-
-
-        </tbody>
-      </table>
+        <div class="table-responsive">
+          <table class="table w-auto">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Fecha solicitud</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+                <th scope="col">Botones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">341234</td>
+                <td>04-abril-2025</td>
+                <td>Pendiente</td>
+                <td>
+                  <a href="#">Detalles solicitud</a>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                  <button type="button" class="btn btn-warning btn-sm">Actualizar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
 
       <!--Detalle de solicitud-->
       <div>
-        <div>
-          
+        <div class="card">
+          <div class="card-header">
+            <h5>Detalles de solictudes de Usuario</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table  w-auto">
+              <thead>
+                <tr>
+                  <th scope="col">Id solicitud</th>
+                  <th scope="col">Id Equipo</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">242</td>
+                  <td>3434</td>
+                  <th>425</th>
+                </tr>
+
+              </tbody>
+
+
+            </table>
+            </div>
+          </div>
+
         </div>
 
       </div>
