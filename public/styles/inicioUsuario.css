@@ -11986,6 +11986,7 @@ body {
   height: 100vh;
   width: 100%;
   box-sizing: border-box !important;
+  font-family: "Tenor Sans";
 }
 
 header {
@@ -12133,4 +12134,4 @@ main.menu-toggle {
   main.menu-toggle {
     margin-left: 0;
   }
-}/*# sourceMappingURL=perfilUsuario.css.map */
+}/*# sourceMappingURL=inicioUsuario.css.map */

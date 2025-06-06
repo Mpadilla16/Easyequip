@@ -46,31 +46,31 @@
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
       <ul class="list-unstyled">
-        <li>
+        <li title="Inicio">
           <a href="../src/InicioUsuario.html">
             <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
             <span>Inicio</span>
           </a>
         </li>
-        <li>
+        <li title="Solicitudes">
           <a href="../src/solicitudesUsuarios.html" class="seleccionado">
             <i class='bx  bx-picture-in-picture-close bx-sm'></i>
             <span>Solicitudes</span>
           </a>
         </li>
-        <li>
+        <li title="Historial">
           <a href="#">
             <i class='bx  bx-history bx-sm'></i>
             <span>Historial</span>
           </a>
         </li>
-        <li>
+        <li title="Equipos">
           <a href="../src/EquiposUsuarios.html">
             <i class='bx  bx-laptop bx-sm'></i>
             <span>Equipos</span>
           </a>
         </li>
-        <li>
+        <li title="Cuenta">
           <a href="#">
             <i class='bx  bx-user-circle bx-sm'></i>
             <span>Cuenta</span>
@@ -97,19 +97,100 @@
 
 
   <main id="main">
-    <!--Banner-->
-    <section>
-    </section>
+  
 
     <!--Dashboard-->
-    <section class="dashboard">
+    <section class="encabezado">
       <div>
-        <h3>Resumen general de solicitudes</h3>
-        <p>Visualiza el estado actual del sistema de solicitudes y accede rapidamente a las acciones mas importantes</p>
+        <h1 class="fw-medium">Gestión de Solicitudes de Equipos</h1>
+        <p>Aquí podrás visualizar y gestionar las solicitudes realizadas por los usuarios, incluyendo su estado y los equipos requeridos</p>
+      </div>
+    </section>
+
+    <section class=" bg-light border border-1 border-secondary border-opacity-25 rounded-1 shadow py-4 px-4  my-4">
+      <div>
+        <h5>Resumen General de Solicitudes</h5>
+        
       </div>
 
+      <div class="my-4">
+        <div class=" d-flex  flex-column flex-lg-row justify-content-between ">
 
-      
+          <div class="d-flex  p-3 rounded-3  card-dashboard card-1 ">
+            <article class="me-5">
+              <p class="text-success mb-0 fw-semibold fs-6">Aprobadas</p>
+              <h3 class="text-dark fw-bold">23</h3>
+              <p class="text-muted mb-0">🔄 Última: 2025-06-04</p>
+              <p class="text-dark mb-0 fw-semibold fs-6">👤 Aprobó: admin</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="bg-gray-lightest p-1 rounded-circle"><i class='bx bxs-hot text-success fs-3'></i></div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-2">
+            <article class="me-5">
+              <p class="text-warning mb-0 fw-semibold fs-6">Pendientes</p>
+              <h3 class="text-dark fw-bold">3</h3>
+              <p class="text-muted mb-0">⏱ Tiempo promedio de espera</p>
+              <p class="text-dark mb-0 fw-semibold fs-6">3 dias</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="circle-card-2 p-2 rounded-2"><i class='bxr  bx-hourglass bx-sm text-warning align-self-center'  ></i> 
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-3">
+            <article class="me-5">
+              <p class="text-danger mb-0 fw-semibold fs-6">Rechazadas</p>
+              <h3 class="text-dark fw-bold">8</h3>
+              <p class="text-muted mb-0">📝 Motivo más común</p>
+              <p class="text-dark mb-0 fw-semibold fs-6">Falta de inventario</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="circle-card-3 p-2 rounded-2 d-flex ">
+                <i class='bxr  bx-dislike bx-sm align-self-center text-danger' ></i> 
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-4">
+            <article class="me-5">
+              <p class="text-primary mb-0 fw-semibold fs-6">Devueltas</p>
+              <h3 class="text-dark fw-bold">8</h3>
+              <p class="text-muted mb-0">📦 Equipos más devueltos</p>
+              <p class="text-dark mb-0 fw-semibold fs-6">Proyector, Laptop</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="bg-gray-lightest p-1 rounded-circle">
+                <i class='bx bxs-calendar text-primary fs-3'></i>
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-5">
+            <article class="me-5">
+              <p class="text-primary mb-0 fw-semibold fs-6">Este mes</p>
+              <h3 class="text-dark fw-bold">30</h3>
+              <p class="text-muted mb-0">📈 Variación respecto al mes pasado</p>
+              <p class="text-dark mb-0 fw-semibold fs-6">+12%</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="bg-gray-lightest p-1 rounded-circle">
+                <i class='bx bxs-calendar text-primary fs-3'></i>
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+        </div>
+        <p>Visualiza el estado actual del sistema de solicitudes y accede rápidamente a las acciones más importantes</p>
+
+      </div>
 
 
     </section>
@@ -117,13 +198,14 @@
 
     <!--Tabla informacion de solicitud-->
     <section class=" ">
-      <table class="table table-hover table-responsive w-auto">
+      <table class="table  table-responsive w-auto">
         <thead>
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Fecha solicitud</th>
             <th scope="col">Estado</th>
             <th scope="col">Acciones</th>
+            <th scope="col">Botones</th>
           </tr>
         </thead>
         <tbody>
@@ -131,7 +213,12 @@
             <td scope="row">341234</td>
             <td>04-abril-2025</td>
             <td>Pendiente</td>
-            <td><a>Detalles solicitud</a></td>
+            <td>
+              <a href="#">Detalles solicitud</a>
+            </td>
+            <th><button type="button" class="btn btn-danger">Eliminar</button>
+              <button type="button" class="btn btn-warning ">Actulizar</button>
+            </th>
           </tr>
 
 

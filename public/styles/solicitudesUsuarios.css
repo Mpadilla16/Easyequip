@@ -11986,6 +11986,7 @@ body {
   height: 100vh;
   width: 100%;
   box-sizing: border-box !important;
+  font-family: "Tenor Sans";
 }
 
 header {
@@ -12121,14 +12122,49 @@ main.menu-toggle {
   margin-left: 18.75rem;
 }
 
+.encabezado h1, .encabezado .h1 {
+  font-family: "Mitr";
+}
+
 /*Estilos para el contenido del main*/
 /*card del dashboard*/
+.card-dashboard {
+  min-width: 250px; /* Mismo ancho mínimo */
+  width: 100%; /* Se adapta al contenedor */
+  max-width: 290px; /* Límite para mantener proporción */
+  height: 200px; /* Altura fija */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
 .card-1 {
-  background-color: #c9ecd0;
+  background-color: #d6eed5;
 }
 
 .card-2 {
-  background-color: #e0c2bc;
+  background-color: #fafc99;
+}
+
+.circle-card-2 {
+  background-color: #f1f38e;
+}
+
+.card-3 {
+  background-color: rgb(241, 195, 195);
+}
+
+.circle-card-3 {
+  background-color: rgb(224, 168, 168);
+}
+
+.card-4 {
+  background-color: #b8e4fd;
+}
+
+.card-5 {
+  background-color: #f7d5fc;
 }
 
 /*Estilos responsivos*/

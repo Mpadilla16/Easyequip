@@ -11986,6 +11986,7 @@ body {
   height: 100vh;
   width: 100%;
   box-sizing: border-box !important;
+  font-family: "Tenor Sans";
 }
 
 header {
@@ -12131,16 +12132,29 @@ main.menu-toggle {
   background-color: #e0c2bc;
 }
 
-/*Estilos galerias*/
+/*Estilos equipos*/
+.card-body h5, .card-body .h5 {
+  color: var(--color-text-secondary);
+}
+
 .solicitar-button {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 2rem;
   background-color: var(--color-primary);
   border: none;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
   /* Animación suave */
+}
+
+.solicitar-button:hover {
+  background-color: var(--color-primary-hover);
+  /* Color hover */
+}
+
+.solicitar-button:focus {
+  background-color: var(--color-primary-focus);
+  /* Color focus */
 }
 
 /*Estilos responsivos*/
