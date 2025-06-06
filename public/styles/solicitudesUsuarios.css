@@ -12129,10 +12129,7 @@ main.menu-toggle {
 /*Estilos para el contenido del main*/
 /*card del dashboard*/
 .card-dashboard {
-  min-width: 250px; /* Mismo ancho mínimo */
   width: 100%; /* Se adapta al contenedor */
-  max-width: 290px; /* Límite para mantener proporción */
-  height: 200px; /* Altura fija */
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -12140,11 +12137,11 @@ main.menu-toggle {
 }
 
 .card-1 {
-  background-color: #d6eed5;
+  background-color: #dcebdb;
 }
 
 .card-2 {
-  background-color: #fafc99;
+  background-color: #f9fab1;
 }
 
 .circle-card-2 {
