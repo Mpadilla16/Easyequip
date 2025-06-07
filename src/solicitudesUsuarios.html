@@ -71,7 +71,7 @@
           </a>
         </li>
         <li title="Cuenta">
-          <a href="#">
+          <a href="../src/historialUsuario.html">
             <i class='bx  bx-user-circle bx-sm'></i>
             <span>Cuenta</span>
           </a>
@@ -110,8 +110,8 @@
 
     <!--Dashboard-->
     <section class=" bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4">
-      <div>
-        <h5>Resumen General de Solicitudes</h5>
+      <div class="my-3">
+        <h4 class="fw-semibold">Resumen General de Solicitudes</h4>
       </div>
       <div class="my-4">
         <div class=" d-flex  flex-column flex-lg-row  gap-2 gap-lg-3">
@@ -189,7 +189,7 @@
             </div>
           </div>
         </div>
-        <p>accede rápidamente a la informacion más importantes</p>
+        <p>Accede rápidamente a la informacion más importantes</p>
 
       </div>
 
@@ -200,8 +200,18 @@
 
     <section
       class="d-md-flex justify-content-between bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4 ">
-      <!--Tabla de solicitud-->
+      
       <div>
+        <div>
+          <div class="my-3 ">
+            <h4 class="fw-semibold" >Solicitudes</h4>
+          </div>
+          <form class="d-flex my-3 my-md-4" role="search">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+        <!--Tabla de solicitud-->
         <div class="table-responsive">
           <table class="table w-auto">
             <thead>
@@ -232,7 +242,7 @@
       </div>
 
       <!--Detalle de solicitud-->
-      <div>
+      <div class="mt-md-4">
         <div class="card">
           <div class="card-header">
             <h5>Detalles de solictudes de Usuario</h5>
@@ -240,24 +250,24 @@
           <div class="card-body">
             <div class="table-responsive">
               <table class="table  w-auto">
-              <thead>
-                <tr>
-                  <th scope="col">Id solicitud</th>
-                  <th scope="col">Id Equipo</th>
-                  <th scope="col">Cantidad</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">242</td>
-                  <td>3434</td>
-                  <th>425</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th scope="col">Id solicitud</th>
+                    <th scope="col">Id Equipo</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">242</td>
+                    <td>3434</td>
+                    <th>425</th>
+                  </tr>
 
-              </tbody>
+                </tbody>
 
 
-            </table>
+              </table>
             </div>
           </div>
 
