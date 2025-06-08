@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -219,18 +219,13 @@
                 <th scope="col">Id</th>
                 <th scope="col">Fecha solicitud</th>
                 <th scope="col">Estado</th>
+                <th scope="col">IdUsuario</th>
                 <th scope="col">Acciones</th>
                 <th scope="col">Botones</th>
               </tr>
             </thead>
             <tbody id="cuerpoTabla">
-              <tr>
-                
-                <td>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                  <button type="button" class="btn btn-warning btn-sm">Actualizar</button>
-                </td>
-              </tr>
+              <!-- Aquí se insertan las solicitudes -->
             </tbody>
           </table>
         </div>
@@ -247,29 +242,19 @@
               <table class="table  w-auto">
                 <thead>
                   <tr>
-                    <th scope="col">Id solicitud</th>
+                    <th scope="col">Id detalle solicitud</th>
                     <th scope="col">Id Equipo</th>
                     <th scope="col">Cantidad</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row">242</td>
-                    <td>3434</td>
-                    <th>425</th>
-                  </tr>
-
+                <tbody id="cuerpoTablaDetalles">
+                  <!-- Aquí se insertan los detalles de las solicitudes -->
                 </tbody>
-
-
               </table>
             </div>
           </div>
-
         </div>
-
       </div>
-
 
     </section>
 
@@ -279,13 +264,11 @@
 
 
 
-  <script src="../src/solicitudesUsuarios.js"></script>
+  <script src="../js/getSolicitudesUsuarios.js"></script>
+  <script src="../js/getDetallesSolicitudesU.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-  <script src="../public/js/Sidebar.js"></script>
-
 
 </body>
 

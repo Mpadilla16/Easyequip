@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cuerpoTabla = document.getElementById("cuerpoTabla");
+  const cuerpoTabla = document.getElementById("cuerpoTablaDetalles");
 
   function obtenerSolicitudes() {
-    fetch("https://localhost:44313/api/solicitud")
+    fetch("https://localhost:44313/api/DetalleSolicitud")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -10,10 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach((solicitud) => {
           const fila = document.createElement("tr");
           fila.innerHTML = `
-            <td class="text-center">${solicitud.IdSolicitud}</td>
-            <td class="text-center">${solicitud.FechaSolicitud.split("T") [0] }</td>
-            <td class="text-center">${solicitud.Estado}</td>
-            <td class="text-center">${solicitud.IdUsuario}</td>
+            <td class="text-center">${solicitud.IdDetalleSolicitud}</td>
+            <td class="text-center">${solicitud.IdEquipo}</td>
+            <td class="text-center">${solicitud.Cantidad}</td>
             <td>
               <button class="btn btn-warning editar-btn" value="${solicitud.id}">Editar</button>
             </td>
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.classList.contains("eliminar-btn")) {
       const id = e.target.value;
       if (confirm("¿Deseas eliminar esta solicitud?")) {
-        fetch(`https://localhost:44313/api/solicitud/${id}`, {
+        fetch(`https://localhost:44313/api/DetalleSolicitud/${id}`, {
           method: "DELETE",
         })
           .then((res) => {
