@@ -193,21 +193,27 @@
 
 
     <section
-      class="d-md-flex justify-content-between bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4 ">
-      
+      class="d-sm-flex justify-content-evenly bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4 ">
+
       <div>
         <div>
           <div class="my-3 ">
-            <h4 class="fw-semibold" >Solicitudes</h4>
+            <h4 class="fw-semibold">Solicitudes</h4>
           </div>
-          <form class="d-flex my-3 my-md-4" role="search">
-            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
-            <button class="btn btn-success" type="submit">Search</button>
+          <form class="my-4">
+            <div class="d-flex flex-column flex-md-row gap-2">
+              <div class="input-group">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
+                <button class="active text-white fw-medium rounded-end buscar" type="submit">Buscar</button>
+              </div>
+              <button class="btn btn-success">Solicitar </button>
+            </div>
           </form>
+
         </div>
         <!--Tabla de solicitud-->
         <div class="table-responsive">
-          <table class="table w-auto">
+          <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
@@ -226,7 +232,7 @@
       </div>
 
       <!--Detalle de solicitud-->
-      <div class="mt-md-4">
+      <div class="mt-md-5">
         <div class="card">
           <div class="card-header">
             <h5>Detalles de solictudes de Usuario</h5>

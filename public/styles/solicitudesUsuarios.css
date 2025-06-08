@@ -12000,6 +12000,27 @@ header {
   left: 0;
 }
 
+.buscar {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--color-primary);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  /* Animación suave */
+}
+
+.buscar:hover {
+  background-color: var(--color-primary-hover);
+  /* Color hover */
+}
+
+.buscar:focus {
+  background-color: var(--color-primary-focus);
+  /* Color focus */
+}
+
 /*Menu*/
 .menu-container {
   height: 100%;
