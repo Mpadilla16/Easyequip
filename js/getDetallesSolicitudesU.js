@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <td class="text-center">${solicitud.IdEquipo}</td>
             <td class="text-center">${solicitud.Cantidad}</td>
             <td>
-              <button class="btn btn-warning editar-btn" value="${solicitud.id}">Editar</button>
-            </td>
-            <td>
               <button class="btn btn-danger eliminar-btn" value="${solicitud.id}">Eliminar</button>
             </td>
           `;
