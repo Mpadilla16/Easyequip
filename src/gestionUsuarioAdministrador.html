@@ -54,19 +54,19 @@
         </li>
         <li title="Usuarios">
           <a href="../src/gestionUsuarioAdministrador.html" class="seleccionado">
-            <i class='bxr  bx-people-diversity bx-sm'  ></i> 
+            <i class='bxr  bx-people-diversity bx-sm'></i>
             <span>Usuarios</span>
           </a>
         </li>
         <li title="Equipos">
-          <a href="../src/equipoAdministrador.html" >
+          <a href="../src/equipoAdministrador.html">
             <i class='bx  bx-laptop bx-sm'></i>
             <span>Equipo</span>
           </a>
         </li>
         <li title="Historial">
           <a href="../src/historialAdministrador.html">
-            <i class='bxr  bx-history bx-sm'  ></i>  
+            <i class='bxr  bx-history bx-sm'></i>
             <span>Historial</span>
           </a>
         </li>
@@ -97,9 +97,133 @@
 
 
   <main id="main">
+    <section>
+      <div class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
+        <h3>Gestión de usuarios del sistema</h3>
+        <!--Boton de agregar usuario que despliega el modal o formulario para agregar y actualizar o editar usuario-->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Agregar usuario
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4">
+
+      <div class="d-flex justify-content-center gap-3">
+        <!--Tabla de usuarios-->
+        <div class="card">
+          <div class="card-header">
+            <h5>Usuarios</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>@social</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--Filtros-->
+        <div class="card p-3">
+          <div class="container-fluid">
+            <form class="row d-md-flex flex-md-column g-3">
+
+              <!-- Buscar por nombre -->
+              <div class="col-12 ">
+                <label for="buscarInstructor" class="form-label">Buscar por nombre o correo</label>
+                <input id="buscarInstructor" type="text" class="form-control" placeholder="Nombre del instructor">
+              </div>
+
+              <!-- Filtro por estado -->
+              <div class="col-12 ">
+                <label for="filtroEstado" class="form-label">Filtrar por rol</label>
+                <select id="filtroEstado" class="form-select">
+                  <option value="1">Todos</option>
+                  <option value="2">Aprendiz</option>
+                  <option value="3">instructor</option>
+                </select>
+              </div>
+
+              <!-- Filtro por tipo -->
+              <div class="col-12 ">
+                <label for="filtroTipo" class="form-label">Filtrar por tipo de solicitud</label>
+                <select id="filtroTipo" class="form-select">
+                  <option value="1">Todos</option>
+                  <option value="2">Aprobado</option>
+                  <option value="3">Rechazadas</option>
+                  <option value="4">Pendientes</option>
+                  <option value="5">Devueltas</option>
+                </select>
+              </div>
+
+              <!-- Filtro por fecha -->
+              <div class="col-12 ">
+                <label for="filtroFecha" class="form-label">Filtrar por fecha</label>
+                <input id="filtroFecha" type="date" class="form-control">
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-   
+    <!--modal que contiene el formulario para registrar o editar usuario-->
+    <section>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar o actualizar usuarios</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!--Formulario para agregar usuarios-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Agregar Usuario</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
 
 
 
