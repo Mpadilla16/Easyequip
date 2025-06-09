@@ -54,19 +54,19 @@
         </li>
         <li title="Usuarios">
           <a href="../src/gestionUsuarioAdministrador.html">
-            <i class='bxr  bx-people-diversity bx-sm'  ></i> 
+            <i class='bxr  bx-people-diversity bx-sm'></i>
             <span>Usuarios</span>
           </a>
         </li>
         <li title="Equipos">
-          <a href="../src/equipoAdministrador.html" >
+          <a href="../src/equipoAdministrador.html">
             <i class='bx  bx-laptop bx-sm'></i>
             <span>Equipos</span>
           </a>
         </li>
         <li title="Historial">
           <a href="../src/historialAdministrador.html">
-            <i class='bxr  bx-history bx-sm'  ></i>  
+            <i class='bxr  bx-history bx-sm'></i>
             <span>Historial</span>
           </a>
         </li>
@@ -98,10 +98,175 @@
 
   <main id="main">
 
+    <!--Titulo-->
+    <section>
+      <div>
+        <h3>Panel de Aprobación de Solicitudes</h3>
+        <p>Revisa, aprueba o rechaza las solicitudes de materiales, equipos y software realizadas por los instructores
+          del centro.</p>
+      </div>
+    </section>
 
-   
+    <!--Dashboard-->
+    <section class=" bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4">
+      <div class="my-3">
+        <h4 class="fw-semibold">Resumen General de Solicitudes</h4>
+      </div>
+      <div class="my-4">
+        <div class=" d-flex  flex-column flex-lg-row  gap-2 gap-lg-3">
 
-    
+          <div class="d-flex  p-3 rounded-3  card-dashboard card-1 ">
+            <article class="me-5 w-auto">
+              <p class="text-success mb-0 fw-semibold fs-6">Aprobadas Hoy</p>
+              <h3 class="text-dark fw-bold">23</h3>
+              <p class="text-muted mb-0">Solicitudes que fueron aprobadas durante el día.</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="bg-gray-lightest p-1 rounded-circle"><i class='bx bxs-hot text-success fs-3'></i></div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-2">
+            <article class="me-5 w-100">
+              <p class="text-warning mb-0 fw-semibold fs-6">Solicitudes Pendientes</p>
+              <h3 class="text-dark fw-bold">8</h3>
+              <p class="text-muted mb-0">Solicitudes en espera de revisión</p>
+
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="circle-card-2 p-2 rounded-2"><i
+                  class='bxr  bx-hourglass bx-sm text-warning align-self-center'></i>
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-3">
+            <article class="me-5 w-auto">
+              <p class="text-danger mb-0 fw-semibold fs-6">Rechazadas Hoy</p>
+              <h3 class="text-dark fw-bold">3</h3>
+              <p class="text-muted mb-0">Solicitudes que fueron rechazadas durante el día.</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="circle-card-3 p-2 rounded-2 d-flex ">
+                <i class='bxr  bx-dislike bx-sm align-self-center text-danger'></i>
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+
+          <div class="d-flex p-3 rounded-3 card-dashboard card-5">
+            <article class="me-5 w-auto">
+              <p class="text-primary mb-0 fw-semibold fs-6">Totales del Mes</p>
+              <h3 class="text-dark fw-bold">30</h3>
+              <p class="text-muted mb-0">Total de solicitudes registradas este mes.</p>
+            </article>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="bg-gray-lightest p-1 rounded-circle">
+                <i class='bx bxs-calendar text-primary fs-3'></i>
+              </div>
+              <i class='bx bx-right-arrow-alt fs-3'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1 py-4 px-4 my-4">
+      <div class="container-fluid">
+        <form class="row g-3">
+
+          <!-- Buscar por nombre -->
+          <div class="col-12 col-md-3">
+            <label for="buscarInstructor" class="form-label">Buscar por nombre del instructor</label>
+            <input id="buscarInstructor" type="text" class="form-control" placeholder="Nombre del instructor">
+          </div>
+
+          <!-- Filtro por estado -->
+          <div class="col-12 col-md-3">
+            <label for="filtroEstado" class="form-label">Filtrar por estado</label>
+            <select id="filtroEstado" class="form-select">
+              <option value="1">Todos</option>
+              <option value="2">Pendientes</option>
+              <option value="3">Aprobadas</option>
+              <option value="4">Rechazadas</option>
+            </select>
+          </div>
+
+          <!-- Filtro por tipo -->
+          <div class="col-12 col-md-3">
+            <label for="filtroTipo" class="form-label">Filtrar por tipo de solicitud</label>
+            <select id="filtroTipo" class="form-select">
+              <option value="1">Todos</option>
+              <option value="2">Material</option>
+              <option value="3">Equipos</option>
+              <option value="4">Software</option>
+            </select>
+          </div>
+
+          <!-- Filtro por fecha -->
+          <div class="col-12 col-md-3">
+            <label for="filtroFecha" class="form-label">Filtrar por fecha</label>
+            <input id="filtroFecha" type="date" class="form-control">
+          </div>
+
+        </form>
+      </div>
+
+      <!--Tabla de solicitudes y detalles de solicitudes-->
+      <div class="mt-5 d-flex flex-column flex-md-row justify-content-md-around">
+        <div>
+          <!--Tabla de solicitud-->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Fecha solicitud</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">IdUsuario</th>
+                  <th scope="col">Acciones</th>
+                  <th scope="col">Botones</th>
+                </tr>
+              </thead>
+              <tbody id="cuerpoTabla">
+                <!-- Aquí se insertan las solicitudes -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!--Detalle de solicitud-->
+        <div class="">
+          <div class="card">
+            <div class="card-header">
+              <h5>Detalles de solictudes de Usuario</h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table  w-auto">
+                  <thead>
+                    <tr>
+                      <th scope="col">Id detalle solicitud</th>
+                      <th scope="col">Id Equipo</th>
+                      <th scope="col">Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cuerpoTablaDetalles">
+                    <!-- Aquí se insertan los detalles de las solicitudes -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
 
 
 

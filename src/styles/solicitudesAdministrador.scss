@@ -154,12 +154,26 @@ main{
 main.menu-toggle{
     margin-left: 18.75rem;
 }
-.banner  h3{
-    font-family: 'Mitr';
-    color: var(--color-text-primary)
-    
+.buscar {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color-primary);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* Animación suave */
 }
 
+.buscar:hover {
+    background-color: var(--color-primary-hover);
+    /* Color hover */
+}
+
+.buscar:focus {
+    background-color: var(--color-primary-focus);
+    /* Color focus */
+}
 
 /*Estilos para el contenido del main*/
 /*card del dashboard*/
