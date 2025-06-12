@@ -42,29 +42,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   cuerpoTabla.addEventListener("click", (e) => {
-  if (e.target.classList.contains("eliminar-btn")) {
-    const id = e.target.value;
-    if (confirm("¿Deseas eliminar esta solicitud?")) 
-      console.log("ID a eliminar:", id);{
-      fetch(`https://localhost:44313/api/solicitud/${id}`, {
-        method: "DELETE",
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error("Error al eliminar la solicitud");
-          return res.text(); // O res.json() si tu API devuelve un JSON
+    if (e.target.classList.contains("eliminar-btn")) {
+      const id = e.target.value;
+      if (confirm("¿Deseas eliminar esta solicitud?")) {
+        console.log("ID a eliminar:", id);
+        fetch(`https://localhost:44313/api/solicitud/${id}`, {
+          method: "DELETE",
         })
-        .then(() => {
-          mostrarMensaje("Solicitud eliminada correctamente.");
-          obtenerSolicitudes(); // 🔄 Recarga los datos reales desde el servidor
-        })
-        .catch((err) => {
-          console.error(err);
-          mostrarMensaje("No se pudo eliminar la solicitud.");
-        });
+          .then((res) => {
+            if (!res.ok) throw new Error("Error al eliminar la solicitud");
+            return res.text(); // o res.json() si el backend devuelve un JSON
+          })
+          .then(() => {
+            mostrarMensaje("Solicitud eliminada correctamente.");
+            obtenerSolicitudes(); // 🔄 Recarga la tabla
+          })
+          .catch((err) => {
+            console.error(err);
+            mostrarMensaje("No se pudo eliminar la solicitud.");
+          });
+      }
     }
-  }
-});
-
+  });
 
   const formularioBusqueda = document.getElementById("formularioBusqueda");
   formularioBusqueda.addEventListener("submit", (e) => {
@@ -105,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // si el input queda vacío, recarga automáticamente todas las solicitudes
   inputBuscar.addEventListener("input", () => {
     if (inputBuscar.value.trim() === "") {
       obtenerSolicitudes();
