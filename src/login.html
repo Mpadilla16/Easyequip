@@ -38,7 +38,8 @@
             <a class="nav-link active fw-bolder" aria-disabled="false" href="#">Servicios</a>
           </li>
           <li class="nav-button  me-lg-5">
-            <a class="active text-white fw-medium rounded rounded-3" aria-disabled="false" href="../src/login.html">Iniciar Sesion</a>
+            <a class="active text-white fw-medium rounded rounded-3" aria-disabled="false"
+              href="../src/login.html">Iniciar Sesion</a>
           </li>
         </ul>
       </div>
@@ -47,141 +48,139 @@
   </nav>
   <!--------Fin barra de navegacion-------------->
 
-<main class="d-lg-flex justify-content-center align-items-center vh-100">
-  <section class="bg-light shadow-sm mx-3 my-4 w-auto  " style="width: 23rem;">
-    <div class="card text-center ">
-      <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="aprendiz-tab" data-bs-toggle="tab" data-bs-target="#aprendiz"
-              type="button" role="tab" aria-controls="aprendiz" aria-selected="true">Aprendiz </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor"
-              type="button" role="tab" aria-controls="instructor" aria-selected="false">Instructor</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin"
-              type="button" role="tab" aria-controls="admin" aria-selected="false">Administrador</button>
-          </li>
-        </ul>
+  <main class="d-lg-flex justify-content-center align-items-center vh-100">
+    <section class="bg-light shadow-sm mx-3 my-4 w-auto  " style="width: 23rem;">
+      <div class="card text-center ">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="aprendiz-tab" data-bs-toggle="tab" data-bs-target="#aprendiz"
+                type="button" role="tab" aria-controls="aprendiz" aria-selected="true">Aprendiz </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor"
+                type="button" role="tab" aria-controls="instructor" aria-selected="false">Instructor</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button"
+                role="tab" aria-controls="admin" aria-selected="false">Administrador</button>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="tab-content" id="myTabContent">
+          <!-- Pestaña Aprendiz -->
+          <div class="tab-pane fade show active" id="aprendiz" role="tabpanel" aria-labelledby="aprendiz-tab">
+            <form class="p-3">
+              <article class="text-center">
+                <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
+                <p>Inicia sesión para continuar</p>
+              </article>
+
+              <div class="text-start">
+                <div class="mb-3">
+                  <label for="emailAprendiz" class="form-label">Dirección de correo electrónico</label>
+                  <input type="email" class="form-control" id="emailAprendiz">
+                </div>
+                <div class="mb-3">
+                  <label for="passwordAprendiz" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="passwordAprendiz">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberAprendiz">
+                  <label class="form-check-label" for="rememberAprendiz">Recuérdame</label>
+                </div>
+
+                <h6>🔑 Mensajes de Seguridad</h6>
+                <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
+                <a class="text-center" href="#">¿Olvidaste tu contraseña?</a>
+
+                <div class="d-flex flex-column">
+                  <button id="iniciarSesionAprendiz" class="btn btn-primary my-2">Iniciar sesión</button>
+                  <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Repite esto para Instructor -->
+          <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
+            <form class="p-3">
+              <article class="text-center">
+                <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
+                <p>Inicia sesión para continuar</p>
+              </article>
+
+              <div class="text-start">
+                <div class="mb-3">
+                  <label for="emailInstructor" class="form-label">Dirección de correo electrónico</label>
+                  <input type="email" class="form-control" id="emailInstructor">
+                </div>
+                <div class="mb-3">
+                  <label for="passwordInstructor" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="passwordInstructor">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberInstructor">
+                  <label class="form-check-label" for="rememberInstructor">Recuérdame</label>
+                </div>
+
+                <h6>🔑 Mensajes de Seguridad</h6>
+                <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+
+                <div class="d-flex flex-column">
+                  <button id="iniciarSesionInstructor" class="btn btn-primary my-2">Iniciar sesión</button>
+                  <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Repite esto para Administrador -->
+          <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+            <form class="p-3">
+              <article class="text-center">
+                <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
+                <p>Inicia sesión para continuar</p>
+              </article>
+
+              <div class="text-start">
+                <div class="mb-3">
+                  <label for="emailAdmin" class="form-label">Dirección de correo electrónico</label>
+                  <input type="email" class="form-control" id="emailAdmin">
+                </div>
+                <div class="mb-3">
+                  <label for="passwordAdmin" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="passwordAdmin">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberAdmin">
+                  <label class="form-check-label" for="rememberAdmin">Recuérdame</label>
+                </div>
+
+                <h6>🔑 Mensajes de Seguridad</h6>
+                <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+
+                <div class="d-flex flex-column">
+                  <button id="iniciarSesionAdmin" class="btn btn-primary my-2">Iniciar sesión</button>
+                  <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
       </div>
-
-      <div class="tab-content" id="myTabContent">
-        <!-- Pestaña Aprendiz -->
-        <div class="tab-pane fade show active" id="aprendiz" role="tabpanel" aria-labelledby="aprendiz-tab">
-          <form class="p-3">
-            <article class="text-center">
-              <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
-              <p>Inicia sesión para continuar</p>
-            </article>
-
-            <div class="text-start">
-              <div class="mb-3">
-                <label for="emailAprendiz" class="form-label">Dirección de correo electrónico</label>
-                <input type="email" class="form-control" id="emailAprendiz">
-              </div>
-              <div class="mb-3">
-                <label for="passwordAprendiz" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordAprendiz">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberAprendiz">
-                <label class="form-check-label" for="rememberAprendiz">Recuérdame</label>
-              </div>
-
-              <h6>🔑 Mensajes de Seguridad</h6>
-              <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
-              <a class="text-center" href="#">¿Olvidaste tu contraseña?</a>
-
-              <div class="d-flex flex-column">
-                <button class="btn btn-primary my-2">Iniciar sesión</button>
-                <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <!-- Pestaña Instructor -->
-        <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-          <form class="p-3">
-            <article class="text-center">
-              <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
-              <p>Inicia sesión para continuar</p>
-            </article>
-
-            <div class="text-start">
-              <div class="mb-3">
-                <label for="emailInstructor" class="form-label">Dirección de correo electrónico</label>
-                <input type="email" class="form-control" id="emailInstructor">
-              </div>
-              <div class="mb-3">
-                <label for="passwordInstructor" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordInstructor">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberInstructor">
-                <label class="form-check-label" for="rememberInstructor">Recuérdame</label>
-              </div>
-
-              <h6>🔑 Mensajes de Seguridad</h6>
-              <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
-              <a href="#">¿Olvidaste tu contraseña?</a>
-
-              <div class="d-flex flex-column">
-                <button class="btn btn-primary my-2">Iniciar sesión</button>
-                <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <!-- Pestaña Administrador -->
-        <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
-          <form class="p-3">
-            <article class="text-center">
-              <h4 class="fw-bold mt-3">¡Bienvenido de nuevo!</h4>
-              <p>Inicia sesión para continuar</p>
-            </article>
-
-            <div class="text-start">
-              <div class="mb-3">
-                <label for="emailAdmin" class="form-label">Dirección de correo electrónico</label>
-                <input type="email" class="form-control" id="emailAdmin">
-              </div>
-              <div class="mb-3">
-                <label for="passwordAdmin" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordAdmin">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberAdmin">
-                <label class="form-check-label" for="rememberAdmin">Recuérdame</label>
-              </div>
-
-              <h6>🔑 Mensajes de Seguridad</h6>
-              <p>Protegemos tus datos. Nunca compartas tu contraseña.</p>
-              <a href="#">¿Olvidaste tu contraseña?</a>
-
-              <div class="d-flex flex-column">
-                <button class="btn btn-primary my-2">Iniciar sesión</button>
-                <a href="../src/Registro.html" class="btn btn-secondary">Registrarse</a>
-              </div>
-            </div>
-          </form>
-        </div>
-
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-
-
-
-
-
-
-
+  <script src="../js/loginUsuario.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script><!--Script de boostrap-->
