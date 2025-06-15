@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Respuesta del backend:", result);
         if (result === true) {
           alert("Usuario registrado correctamente");
-          window.location.href = "src/index.html"; // Ajusta si tu estructura de carpetas es diferente
+          window.location.href = "gestionUsuarioAdministrador.html"; // Ajusta si tu estructura de carpetas es diferente
         } else {
           alert("El servidor respondió, pero no se registró el usuario.");
         }

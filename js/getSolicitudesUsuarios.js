@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <button class="btn btn-danger eliminar-btn" value="${solicitud.IdSolicitud}">Eliminar</button>
             </td>
           `;
-          cuerpoTabla.appendChild(fila);
+          cuerpoTabla.appendChild(fila); 
         });
       })
       .catch((error) => {

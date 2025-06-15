@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Fuentes-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-  <!--Fin fuentes-->
-  <link rel="stylesheet" href="../public/styles/gestionUsuarioAdministrador.css"> <!--Hoja de Estilo-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../public/styles/gestionUsuarioAdministrador.css" />
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
   <title>Gestion Usuarios Administrador</title>
 </head>
-
 <body>
   <header class="navbar position-fixed border border-1 border-bottom border-opacity-25 border-secondary">
     <div class="container-fluid d-flex w-100">
@@ -41,8 +35,6 @@
       </div>
     </div>
   </header>
-
-
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
       <ul class="list-unstyled">
@@ -76,9 +68,7 @@
             <span>Mi Cuenta</span>
           </a>
         </li>
-
       </ul>
-
       <!--Opciones para el usuaruio-->
       <ul class="list-unstyled d-lg-none border-1 border-top  border-secondary border-opacity-25 ">
         <li>
@@ -92,208 +82,113 @@
         </li>
       </ul>
     </nav>
-
   </section>
-
-
   <main id="main">
     <section>
       <div class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
         <h3>Gestión de usuarios del sistema</h3>
-
       </div>
     </section>
+    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1 py-4 px-4 my-4">
+      <div class="d-flex flex-column align-items-center gap-3">
+        <!-- Botón para agregar usuario -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <a href="registro.html" class="btn btn-primary">Agregar Usuario</a>
+          </div>
+        <!-- Buscador -->
+        <form id="formularioBusqueda" class="d-flex gap-2 mb-3" style="max-width: 500px;">
+          <input id="inputBuscar" class="form-control" placeholder="Buscar usuario por ID" />
+          <button id="btnBuscar" type="submit" class="btn btn-primary">Buscar</button>
+        </form>
 
-    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1  py-4 px-4  my-4">
-
-      <div class="d-flex justify-content-center gap-3">
-        <!--Tabla de usuarios-->
-        <div class="card">
+        <!-- Tabla de usuarios -->
+        <div class="card w-100">
           <div class="card-header">
-            <h5>Usuarios</h5>
+            <h5 class="text-center mb-0">Usuarios</h5>
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table">
-                <thead>
+              <table class="table table-bordered table-hover">
+                <thead class="table-secondary text-center">
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">IdUsuario</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Número Identificación</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">IdRol</th>
+                    <th scope="col">Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                  </tr>
+                  <!-- Filas generadas dinámicamente -->
                 </tbody>
               </table>
             </div>
-
-          </div>
-
-        </div>
-
-        <div>
-          <div>
-            <!--Boton de agregar usuario que despliega el modal o formulario para agregar y actualizar o editar usuario-->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Agregar usuario
-            </button>
           </div>
         </div>
-
       </div>
     </section>
-
-
-    <!--modal que contiene el formulario para registrar o editar usuario-->
-    <section>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Modal para editar usuario -->
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form id="formEditarUsuario">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar o actualizar usuarios</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="editarModalLabel">Editar Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-              <!--Formulario para agregar usuarios-->
-              <form id="registroForm" class="bg-white  p-4 rounded shadow-sm form-container" novalidate>
-                <div class="row row"><!-- Nombres y Apellidos -->
-                  <div class="col-12  ">
-                    <label for="nombre" class="form-label ">Nombres y Apellidos</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                      <input type="text" class="form-control" id="nombre" placeholder="Ana Gómez" required>
-                      <div class="invalid-feedback">Solo letras y espacios.</div>
-                    </div>
-                  </div>
-                  <!--Numero de identificacion-->
-                  <div class="col-12 mt-3">
-                    <label for="identificacion" class="form-label">Número de Identificación</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                      <input type="text" class="form-control" id="identificacion" placeholder=" 1020304050" required>
-                      <div class="invalid-feedback">Ingrese un número válido.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"> <!--Correo electronico-->
-                  <div class="col-12 mt-3">
-                    <label for="correo" class="form-label">Correo Electrónico</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
-                      <input type="email" class="form-control" id="correo" placeholder="Ej: usuario@correo.com"
-                        required>
-                      <div class="invalid-feedback">Correo inválido.</div>
-                    </div>
-                  </div>
-                  <!--Telefono-->
-                  <div class="col-12 mt-3">
-                    <label for="telefono" class="form-label">Telefono</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                      <input type="tel" class="form-control" id="telefono" placeholder=" 000-000-00-00" required>
-                      <div class="invalid-feedback">telefono no es valido</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"> <!--Fecha Nacimiento-->
-                  <div class="col-12 mt-3">
-                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                      <input type="date" class="form-control" id="fechaNacimiento" placeholder=" 000-000-00-00"
-                        required>
-                      <div class="invalid-feedback">Ingrese una fecha de nacimiento válida.</div>
-                    </div>
-                  </div>
-                  <!-- Rol del usuario -->
-                  <div class="col-12 mt-3">
-                    <label for="rol" class="form-label">Rol</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-person-rolodex"></i></span>
-                      <select class="form-select" id="rol" required>
-                        <option value="1">Aprendiz</option>
-                        <option value="2">Instructor</option>
-                        <option value="3">Tecnico</option>
-                      </select>
-                      <div class="invalid-feedback">Rol</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"><!-- Contraseña -->
-                  <div class="col-12 mt-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-building"></i></span>
-                      <input type="password" class="form-control" id="password" placeholder="Ingrese una Contraseña"
-                        required>
-                      <div class="invalid-feedback">Debe contener mínimo 8 caracteres, una mayúscula, un número y un
-                        símbolo.
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Confirmar Contraseña -->
-                  <div class="col-12 mt-3">
-                    <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                    <div class="input-group">
-                      <span class="input-group-text"><i class="bi bi-building-check"></i></span>
-                      <input type="password" class="form-control" id="confirmPassword"
-                        placeholder="Confirme su contraseña" required>
-                      <div class="invalid-feedback">Las contraseñas no coinciden.</div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <input type="hidden" id="editarUsuarioId" />
+              <div class="mb-3">
+                <label for="nombres" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="editarNombres" required />
+              </div>
+              <div class="mb-3">
+                <label for="numeroIdentificacion" class="form-label">Número Identificación</label>
+                <input type="text" class="form-control" id="editarIdentificacion" required />
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="editarCorreo" required />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="editarTelefono" />
+              </div>
+              <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="editarFecha" />
+              </div>
+              <div class="mb-3">
+                <label for="idRol" class="form-label">IdRol</label>
+                <input type="number" class="form-control" id="editarRol" required />
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Agregar Usuario</button>
+              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
+    </div>
 
+ 
+
+
+
+    </div>
+    </div>
+    </div>
     </section>
 
-
-
-
-
-
-
-
-
   </main>
-
-
-
-
+  <script src="../js/getUsuarios.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-  <script src="../public/js/Sidebar.js"></script>
-
-
 </body>
-
 </html>
