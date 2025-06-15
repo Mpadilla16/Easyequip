@@ -11982,7 +11982,7 @@ textarea.form-control-lg {
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(232, 233, 240);
   height: 100vh;
   width: 100%;
   box-sizing: border-box !important;
@@ -11990,7 +11990,7 @@ body {
 }
 
 header {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(232, 233, 240);
   z-index: 200;
   width: 100%;
   display: flex;
@@ -12076,7 +12076,7 @@ header {
 
 /*Sidebar*/
 .sidebar {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(232, 233, 240);
   margin-top: 4rem;
   width: 4rem;
   height: 100%;
@@ -12112,7 +12112,7 @@ header {
 
 /*main*/
 main {
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-left: 4rem;
   padding: 2rem;
   transition: margin-left 0.3s ease;
@@ -12120,25 +12120,6 @@ main {
 
 main.menu-toggle {
   margin-left: 18.75rem;
-}
-
-.banner h3, .banner .h3 {
-  font-family: "Mitr";
-  color: var(--color-text-primary);
-}
-
-#registroForm .input-group input::-moz-placeholder {
-  font-size: 10px;
-}
-
-#registroForm .input-group input::placeholder {
-  font-size: 10px;
-}
-
-.form-label {
-  margin-bottom: 0;
-  color: var(--color-text-secondary);
-  font-weight: 700;
 }
 
 /*Estilos responsivos*/
@@ -12153,4 +12134,4 @@ main.menu-toggle {
   main.menu-toggle {
     margin-left: 0;
   }
-}/*# sourceMappingURL=gestionUsuarioAdministrador.css.map */
+}/*# sourceMappingURL=inicioAdministrador.css.map */

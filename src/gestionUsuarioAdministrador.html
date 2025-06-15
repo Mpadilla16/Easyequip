@@ -100,10 +100,7 @@
     <section>
       <div class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
         <h3>Gestión de usuarios del sistema</h3>
-        <!--Boton de agregar usuario que despliega el modal o formulario para agregar y actualizar o editar usuario-->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Agregar usuario
-        </button>
+
       </div>
     </section>
 
@@ -153,48 +150,15 @@
 
         </div>
 
-        <!--Filtros-->
-        <div class="card p-3">
-          <div class="container-fluid">
-            <form class="row d-md-flex flex-md-column g-3">
-
-              <!-- Buscar por nombre -->
-              <div class="col-12 ">
-                <label for="buscarInstructor" class="form-label">Buscar por nombre o correo</label>
-                <input id="buscarInstructor" type="text" class="form-control" placeholder="Nombre del instructor">
-              </div>
-
-              <!-- Filtro por estado -->
-              <div class="col-12 ">
-                <label for="filtroEstado" class="form-label">Filtrar por rol</label>
-                <select id="filtroEstado" class="form-select">
-                  <option value="1">Todos</option>
-                  <option value="2">Aprendiz</option>
-                  <option value="3">instructor</option>
-                </select>
-              </div>
-
-              <!-- Filtro por tipo -->
-              <div class="col-12 ">
-                <label for="filtroTipo" class="form-label">Filtrar por tipo de solicitud</label>
-                <select id="filtroTipo" class="form-select">
-                  <option value="1">Todos</option>
-                  <option value="2">Aprobado</option>
-                  <option value="3">Rechazadas</option>
-                  <option value="4">Pendientes</option>
-                  <option value="5">Devueltas</option>
-                </select>
-              </div>
-
-              <!-- Filtro por fecha -->
-              <div class="col-12 ">
-                <label for="filtroFecha" class="form-label">Filtrar por fecha</label>
-                <input id="filtroFecha" type="date" class="form-control">
-              </div>
-
-            </form>
+        <div>
+          <div>
+            <!--Boton de agregar usuario que despliega el modal o formulario para agregar y actualizar o editar usuario-->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Agregar usuario
+            </button>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -211,6 +175,94 @@
             </div>
             <div class="modal-body">
               <!--Formulario para agregar usuarios-->
+              <form id="registroForm" class="bg-white  p-4 rounded shadow-sm form-container" novalidate>
+                <div class="row row"><!-- Nombres y Apellidos -->
+                  <div class="col-12  ">
+                    <label for="nombre" class="form-label ">Nombres y Apellidos</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                      <input type="text" class="form-control" id="nombre" placeholder="Ana Gómez" required>
+                      <div class="invalid-feedback">Solo letras y espacios.</div>
+                    </div>
+                  </div>
+                  <!--Numero de identificacion-->
+                  <div class="col-12 mt-3">
+                    <label for="identificacion" class="form-label">Número de Identificación</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+                      <input type="text" class="form-control" id="identificacion" placeholder=" 1020304050" required>
+                      <div class="invalid-feedback">Ingrese un número válido.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"> <!--Correo electronico-->
+                  <div class="col-12 mt-3">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
+                      <input type="email" class="form-control" id="correo" placeholder="Ej: usuario@correo.com"
+                        required>
+                      <div class="invalid-feedback">Correo inválido.</div>
+                    </div>
+                  </div>
+                  <!--Telefono-->
+                  <div class="col-12 mt-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                      <input type="tel" class="form-control" id="telefono" placeholder=" 000-000-00-00" required>
+                      <div class="invalid-feedback">telefono no es valido</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"> <!--Fecha Nacimiento-->
+                  <div class="col-12 mt-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                      <input type="date" class="form-control" id="fechaNacimiento" placeholder=" 000-000-00-00"
+                        required>
+                      <div class="invalid-feedback">Ingrese una fecha de nacimiento válida.</div>
+                    </div>
+                  </div>
+                  <!-- Rol del usuario -->
+                  <div class="col-12 mt-3">
+                    <label for="rol" class="form-label">Rol</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person-rolodex"></i></span>
+                      <select class="form-select" id="rol" required>
+                        <option value="1">Aprendiz</option>
+                        <option value="2">Instructor</option>
+                        <option value="3">Tecnico</option>
+                      </select>
+                      <div class="invalid-feedback">Rol</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"><!-- Contraseña -->
+                  <div class="col-12 mt-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-building"></i></span>
+                      <input type="password" class="form-control" id="password" placeholder="Ingrese una Contraseña"
+                        required>
+                      <div class="invalid-feedback">Debe contener mínimo 8 caracteres, una mayúscula, un número y un
+                        símbolo.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Confirmar Contraseña -->
+                  <div class="col-12 mt-3">
+                    <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-building-check"></i></span>
+                      <input type="password" class="form-control" id="confirmPassword"
+                        placeholder="Confirme su contraseña" required>
+                      <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
