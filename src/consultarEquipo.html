@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <!--Fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <!--Fin fuentes-->
+  <link rel="stylesheet" href="../public/styles/solicitudesAdministrador.css"> <!--Hoja de Estilo-->
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+  <title>Solicitudes Administrador</title>
+</head>
+
+<body>
+  <header class="navbar position-fixed border border-1 border-bottom border-opacity-25 border-secondary">
+    <div class="container-fluid d-flex w-100">
+      <!-- Marca y botón de menú lateral -->
+      <div class="d-flex align-items-center">
+        <div class="menu-container d-flex align-items-center me-2">
+          <div class="menu d-flex" id="menu-btn">
+            <i class='bx bx-menu-wide bx-md'></i>
+            <i class='bx bxs-arrow-right-stroke bx-md d-none'></i>
+          </div>
+        </div>
+        <div class="brand">
+          <span class="name">Easyequip</span>
+        </div>
+      </div>
+      <div class="right ">
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle bx-sm'></i></a>
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i></a>
+        <a class="d-none d-lg-flex" href="#"><i class='bx bx-bell-ring bx-sm'></i></a>
+        <img src="../public/assets/imagenes/woman-standing-working-her-tablet.jpg" class="user">
+      </div>
+    </div>
+  </header>
+
+
+  <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
+    <nav>
+      <ul class="list-unstyled">
+        <li title="Solicitudes">
+          <a href="../src/solicitudesAdministrador.html" class="seleccionado">
+            <i class='bx  bx-picture-in-picture-close bx-sm'></i>
+            <span>Solicitudes</span>
+          </a>
+        </li>
+        <li title="Usuarios">
+          <a href="../src/gestionUsuarioAdministrador.html">
+            <i class='bxr  bx-people-diversity bx-sm'></i>
+            <span>Usuarios</span>
+          </a>
+        </li>
+        <li title="Equipos">
+          <a href="../src/equipoAdministrador.html">
+            <i class='bx  bx-laptop bx-sm'></i>
+            <span>Equipos</span>
+          </a>
+        </li>
+        <li title="Historial">
+          <a href="../src/historialAdministrador.html">
+            <i class='bxr  bx-history bx-sm'></i>
+            <span>Historial</span>
+          </a>
+        </li>
+        <li title="Cuenta">
+          <a href="#">
+            <i class='bx  bx-user-circle bx-sm'></i>
+            <span>Mi Cuenta</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <!--Opciones para el usuaruio-->
+      <ul class="list-unstyled d-lg-none border-1 border-top  border-secondary border-opacity-25 ">
+        <li>
+          <a href="#"><i class='bx bx-message-circle bx-sm'></i> <span>Mensajes</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-bell-ring bx-sm'></i> <span>Notificaciones</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i><span>Ayuda</span></a>
+        </li>
+      </ul>
+    </nav>
+
+  </section>
+
+
+  <main id="main">
+
+  <!-- Contenedor principal -->
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Consultar Equipos</h2>
+
+    <!-- Controles -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" id="busqueda" class="form-control" placeholder="🔍 Buscar por nombre...">
+      </div>
+      <div class="col-md-6 text-end">
+        <button id="btnRecargar" class="btn btn-primary">🔄 Recargar</button>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Cantidad Disponible</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+          <tr><td colspan="4" class="text-muted">Cargando equipos...</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-end text-muted" id="totalEquipos"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  
+<!-- Botón Volver -->
+<div class="text-end mt-3">
+  <a href="EquiposUsuarios.html" class="btn btn-outline-secondary">
+    ⬅️ Volver
+  </a>
+</div>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabla = document.getElementById("cuerpoTabla");
+      const total = document.getElementById("totalEquipos");
+      const inputBusqueda = document.getElementById("busqueda");
+      const btnRecargar = document.getElementById("btnRecargar");
+
+      let equiposOriginal = [];
+
+      function mostrarEquipos(lista) {
+        tabla.innerHTML = "";
+        if (lista.length === 0) {
+          tabla.innerHTML = `<tr><td colspan="4" class="text-center text-muted">No se encontraron equipos.</td></tr>`;
+        } else {
+          lista.forEach(e => {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+              <td>${e?.IdEquipo ?? "—"}</td>
+              <td>${e?.Nombre ?? "—"}</td>
+              <td>${e?.Descripcion ?? "—"}</td>
+              <td>${e?.CantidadDisponible ?? 0}</td>
+            `;
+            tabla.appendChild(fila);
+          });
+        }
+        total.textContent = `Total de equipos: ${lista.length}`;
+      }
+
+      function obtenerEquipos() {
+        tabla.innerHTML = `<tr><td colspan="4" class="text-center text-muted">Cargando equipos...</td></tr>`;
+        fetch("https://localhost:44313/api/Equipo")
+          .then(res => {
+            if (!res.ok) throw new Error("Error al consultar los equipos.");
+            return res.json();
+          })
+          .then(data => {
+            equiposOriginal = Array.isArray(data) ? data : [];
+            mostrarEquipos(equiposOriginal);
+          })
+          .catch(error => {
+            tabla.innerHTML = `<tr><td colspan="4" class="text-danger text-center">❌ Error al cargar los equipos</td></tr>`;
+            console.error(error);
+            total.textContent = "";
+          });
+      }
+
+      // Buscar
+      inputBusqueda.addEventListener("input", () => {
+        const texto = inputBusqueda.value.toLowerCase();
+        const filtrados = equiposOriginal.filter(eq => eq.Nombre?.toLowerCase().includes(texto));
+        mostrarEquipos(filtrados);
+      });
+
+      // Recargar
+      btnRecargar.addEventListener("click", () => {
+        inputBusqueda.value = "";
+        obtenerEquipos();
+      });
+
+      obtenerEquipos(); // cargar al inicio
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

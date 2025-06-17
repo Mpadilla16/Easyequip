@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,12 +64,6 @@
             <span>Equipos</span>
           </a>
         </li>
-        <li title="Historial">
-          <a href="../src/historialAdministrador.html">
-            <i class='bxr  bx-history bx-sm'></i>
-            <span>Historial</span>
-          </a>
-        </li>
         <li title="Cuenta">
           <a href="#">
             <i class='bx  bx-user-circle bx-sm'></i>
@@ -102,7 +96,8 @@
     <section>
       <div>
         <h3>Panel de Aprobación de Solicitudes</h3>
-        <p>Revisa, aprueba o rechaza las solicitudes de materiales, equipos y software realizadas por los instructores
+        <p>Revisa, aprueba o rechaza las solicitudes de materiales, equipos y software realizadas por los instructores y
+          aprendices
           del centro.</p>
       </div>
     </section>
@@ -112,6 +107,15 @@
       <div class="my-3">
         <h4 class="fw-semibold">Resumen General de Solicitudes</h4>
       </div>
+      <!-- Formulario de búsqueda -->
+      <form id="formularioBusqueda" class="d-flex flex-column flex-md-row align-items-md-center gap-2 mb-4">
+        <input type="text" id="inputBuscar" placeholder="Buscar solicitud por ID" class="form-control w-auto" />
+        <button type="submit" id="btnBuscar" class="btn btn-primary">Buscar</button>
+      </form>
+
+
+
+
       <div class="my-4">
         <div class=" d-flex  flex-column flex-lg-row  gap-2 gap-lg-3">
 
@@ -173,118 +177,36 @@
       </div>
     </section>
 
-    <!--Filtros-->
-    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1 py-4 px-4 my-4">
-      <div class="container-fluid">
-        <form class="row g-3">
 
-          <!-- Buscar por nombre -->
-          <div class="col-12 col-md-3">
-            <label for="buscarInstructor" class="form-label">Buscar por nombre del instructor</label>
-            <input id="buscarInstructor" type="text" class="form-control" placeholder="Nombre del instructor">
-          </div>
-
-          <!-- Filtro por estado -->
-          <div class="col-12 col-md-3">
-            <label for="filtroEstado" class="form-label">Filtrar por estado</label>
-            <select id="filtroEstado" class="form-select">
-              <option value="1">Todos</option>
-              <option value="2">Pendientes</option>
-              <option value="3">Aprobadas</option>
-              <option value="4">Rechazadas</option>
-            </select>
-          </div>
-
-          <!-- Filtro por tipo -->
-          <div class="col-12 col-md-3">
-            <label for="filtroTipo" class="form-label">Filtrar por tipo de solicitud</label>
-            <select id="filtroTipo" class="form-select">
-              <option value="1">Todos</option>
-              <option value="2">Material</option>
-              <option value="3">Equipos</option>
-              <option value="4">Software</option>
-            </select>
-          </div>
-
-          <!-- Filtro por fecha -->
-          <div class="col-12 col-md-3">
-            <label for="filtroFecha" class="form-label">Filtrar por fecha</label>
-            <input id="filtroFecha" type="date" class="form-control">
-          </div>
-
-        </form>
+    <!-- Tabla de solicitudes -->
+    <div class="mt-5 d-flex flex-column flex-md-row justify-content-md-around">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Fecha solicitud</th>
+              <th scope="col">Estado</th>
+              <th scope="col">IdUsuario</th>
+              <th scope="col">Acciones</th>
+              <th scope="col">Botones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+            <!-- Aquí se insertan las solicitudes -->
+          </tbody>
+        </table>
       </div>
-
-      <!--Tabla de solicitudes y detalles de solicitudes-->
-      <div class="mt-5 d-flex flex-column flex-md-row justify-content-md-around">
-        <div>
-          <!--Tabla de solicitud-->
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Fecha solicitud</th>
-                  <th scope="col">Estado</th>
-                  <th scope="col">IdUsuario</th>
-                  <th scope="col">Acciones</th>
-                  <th scope="col">Botones</th>
-                </tr>
-              </thead>
-              <tbody id="cuerpoTabla">
-                <!-- Aquí se insertan las solicitudes -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!--Detalle de solicitud-->
-        <div class="">
-          <div class="card">
-            <div class="card-header">
-              <h5>Detalles de solictudes de Usuario</h5>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table  w-auto">
-                  <thead>
-                    <tr>
-                      <th scope="col">Id detalle solicitud</th>
-                      <th scope="col">Id Equipo</th>
-                      <th scope="col">Cantidad</th>
-                    </tr>
-                  </thead>
-                  <tbody id="cuerpoTablaDetalles">
-                    <!-- Aquí se insertan los detalles de las solicitudes -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
-
-
-
-
-
-
-
-
-
   </main>
 
-
-
-
+  <!-- Scripts -->
+  <script src="../js/getSolicitudesAdmin.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
   <script src="../public/js/Sidebar.js"></script>
-
-
 </body>
 
 </html>
