@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,7 @@
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
   <title>Gestion Usuarios Administrador</title>
 </head>
+
 <body>
   <header class="navbar position-fixed border border-1 border-bottom border-opacity-25 border-secondary">
     <div class="container-fluid d-flex w-100">
@@ -38,6 +40,12 @@
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
       <ul class="list-unstyled">
+          <li title="Inicio">
+          <a href="../src/InicioAdministrador.html" >
+            <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
+            <span>Inicio</span>
+          </a>
+        </li>
         <li title="Solicitudes">
           <a href="../src/solicitudesAdministrador.html">
             <i class='bx  bx-picture-in-picture-close bx-sm'></i>
@@ -77,24 +85,28 @@
       </ul>
     </nav>
   </section>
+
+  <!-- Contenido principal de la página -->
   <main id="main">
     <section>
-      <div class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
+      <div class="">
         <h3>Gestión de usuarios del sistema</h3>
       </div>
     </section>
     <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1 py-4 px-4 my-4">
       <div class="d-flex flex-column align-items-center gap-3">
-        <!-- Botón para agregar usuario -->
-          <div>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <a href="registro.html" class="btn btn-primary">Agregar Usuario</a>
-          </div>
-        <!-- Buscador -->
-        <form id="formularioBusqueda" class="d-flex gap-2 mb-3" style="max-width: 500px;">
-          <input id="inputBuscar" class="form-control" placeholder="Buscar usuario por ID" />
-          <button id="btnBuscar" type="submit" class="btn btn-primary">Buscar</button>
-        </form>
+        <div class="container-fluid">
+          <form id="formularioBusqueda" class="row">
+            <div class="input-group col-auto col-md-5 w-auto ">
+              <input id="inputBuscar" class="form-control" placeholder="Buscar usuario por ID" />
+              <button id="btnBuscar" type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+            <!-- Botón para agregar usuario -->
+            <div class="col-auto">
+              <a href="registro.html" class="btn btn-success">Agregar Usuario</a>
+            </div>
+          </form>
+        </div>
 
         <!-- Tabla de usuarios -->
         <div class="card w-100">
@@ -104,7 +116,7 @@
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
-                <thead class="table-secondary text-center">
+                <thead class=" text-center">
                   <tr>
                     <th scope="col">IdUsuario</th>
                     <th scope="col">Nombres</th>
@@ -170,7 +182,7 @@
       </div>
     </div>
 
- 
+
 
 
 
@@ -186,4 +198,5 @@
     crossorigin="anonymous"></script>
   <script src="../public/js/Sidebar.js"></script>
 </body>
+
 </html>

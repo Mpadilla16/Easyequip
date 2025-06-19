@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
   <!--Fin fuentes-->
-  <link rel="stylesheet" href="../public/styles/inicioUsuario.css"><!--Hoja de estilos-->
+  <link rel="stylesheet" href="../public/styles/inicioAdministrador.css"><!--Hoja de estilos-->
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
-  <title>Easyequip-Usuario</title>
+  <title>Inicio Administrador</title>
 </head>
 
 <body>
@@ -46,31 +46,37 @@
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
       <ul class="list-unstyled">
-        <li>
-          <a href="../src/InicioUsuario.html" class="seleccionado">
+        <li title="Inicio">
+          <a href="../src/InicioAdministrador.html" class="seleccionado">
             <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
             <span>Inicio</span>
           </a>
         </li>
-        <li>
-          <a href="../src/solicitudesUsuarios.html">
+
+        <li title="Solicitudes">
+          <a href="../src/solicitudesAdministrador.html">
             <i class='bx  bx-picture-in-picture-close bx-sm'></i>
             <span>Solicitudes</span>
           </a>
         </li>
-        <li>
-          <a href="../src/EquiposUsuarios.html">
-            <i class='bx  bx-laptop bx-sm'></i>
-            <span>Equipos</span>
+        <li title="Usuarios">
+          <a href="../src/gestionUsuarioAdministrador.html">
+            <i class='bxr  bx-people-diversity bx-sm'></i>
+            <span>Usuarios</span>
           </a>
         </li>
-        <li>
+        <li title="Equipos">
+          <a href="../src/equipoAdministrador.html">
+            <i class='bx  bx-laptop bx-sm'></i>
+            <span>Equipo</span>
+          </a>
+        </li>
+        <li title="Cuenta">
           <a href="#">
             <i class='bx  bx-user-circle bx-sm'></i>
-            <span>Cuenta</span>
+            <span>Mi Cuenta</span>
           </a>
         </li>
-
       </ul>
 
       <!--Opciones para el usuaruio-->
@@ -92,14 +98,129 @@
 
   <main id="main">
 
-    <section class="w-100">
-      
+    <section>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h3 class="card-title titulo fw-medium">Bienvenido al Panel de Administración de Easyequip</h3>
+          <p class="card-text">Easyequip es un sistema especializado en la gestión de préstamos y devoluciones de
+            equipos tecnológicos como portátiles, tablets, video beams y trípodes, diseñado para optimizar los procesos
+            del Centro de Servicios de Salud - Regional Antioquia del SENA.</p>
+          <p class="card-text"><small class="text-body-secondary">Ultima Actlizacion 18 de Agosto de 2025</small></p>
+        </div>
+      </div>
+    </section>
 
+    <section class="mt-2 mt-md-4 mt-lg-5">
       
+      <div class="d-flex flex-column flex-lg-row-reverse gap-3 ">
+        <!--Panel-->
+          <div class="panel ">         
+            <div class="card mb-3" style="max-width: 500px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../public/assets/imagenes/Acceso_rapido.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Gestionar Solicitudes</h5>
+                    <p class="card-text">Procese solicitudes de préstamo y devolución de equipos tecnológicos.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          
 
-      
+          
+            <div class="card mb-3" style="max-width: 500px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../public/assets/imagenes/imagen inici.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Administrar Usuarios</h5>
+                    <p class="card-text">Registre, edite o elimine usuarios e instructores del sistema.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+          
+            <div class="card mb-3" style="max-width: 500px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../public/assets/imagenes/computador.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Estado de Equipos</h5>
+                    <p class="card-text">Monitoree la disponibilidad y el estado actual de los equipos tecnológicos.</p>                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+          
+            <div class="card mb-3" style="max-width: 500px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../public/assets/imagenes/perfil.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Mi Perfil</h5>
+                    <p class="card-text">Consulte y edite su información personal como administrador del sistema.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class=" card w-100 p-3">
+          <div class="py-3">
+            <h4 class="fw-medium">Gestión de Datos en Easyequip</h4>
+          </div>
+
+          <div class=" d-flex flex-column  gap-2 gap-lg-4  my-2 my-lg-3 ">
+            <div>
+              <div class="d-flex gap-3 " >
+              <img width="35" height="35" src="https://img.icons8.com/office/40/goal--v1.png" alt="goal--v1"/>
+              <h4>Misión</h4>
+            </div>
+            <p class="mt-2">Brindar una solución tecnológica eficiente y segura para la administración de préstamos y devoluciones de equipos en el entorno educativo del SENA, asegurando el control, la trazabilidad y la optimización de los recursos tecnológicos disponibles para la formación.</p>
+            </div>
+
+            <div>
+              <div class="d-flex gap-3">
+                <img width="40" height="40" src="https://img.icons8.com/color/48/ophthalmology.png" alt="ophthalmology"/>
+                <h4>Vision</h4>
+              </div>
+              <p class="mt-2">Ser el sistema de referencia dentro del SENA para la gestión de recursos tecnológicos, reconocido por su facilidad de uso, confiabilidad y capacidad de adaptación a las necesidades de cada centro de formación.</p>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
 
     </section>
+
+
+
+
+
+
+
 
 
 

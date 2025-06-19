@@ -12122,49 +12122,6 @@ main.menu-toggle {
   margin-left: 18.75rem;
 }
 
-.banner h3, .banner .h3 {
-  font-family: "Mitr";
-  color: var(--color-text-primary);
-}
-
-/*Estilos para el contenido del main*/
-/*card del dashboard*/
-.card-dashboard {
-  width: 100%; /* Se adapta al contenedor */
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-bottom: 1rem;
-}
-
-.card-1 {
-  background-color: #dcebdb;
-}
-
-.card-2 {
-  background-color: #f9fab1;
-}
-
-.circle-card-2 {
-  background-color: #f1f38e;
-}
-
-.card-3 {
-  background-color: rgb(241, 195, 195);
-}
-
-.circle-card-3 {
-  background-color: rgb(224, 168, 168);
-}
-
-.card-4 {
-  background-color: #b8e4fd;
-}
-
-.card-5 {
-  background-color: #f7d5fc;
-}
-
 /*Estilos responsivos*/
 @media (max-width: 500px) {
   .sidebar {
