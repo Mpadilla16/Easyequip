@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (btnConsultar) {
     btnConsultar.addEventListener("click", () => {
-      window.location.href = "consultarEquipo.html";
+      window.location.href = "consultarEquipoUsua.html";
     });
   }
 

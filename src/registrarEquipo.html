@@ -2,25 +2,26 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Equipos Administrador</title>
-
-  <!-- Fuentes -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=assets, initial-scale=1.0">
+  <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="../public/styles/equipoAdministrador.css">
+  <!--Fin fuentes-->
+  <link rel="stylesheet" href="../public/styles/solicitudesAdministrador.css"> <!--Hoja de Estilo-->
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+  <title>Registrar Equipos Administrador</title>
 </head>
 
 <body>
   <header class="navbar position-fixed border border-1 border-bottom border-opacity-25 border-secondary">
     <div class="container-fluid d-flex w-100">
+      <!-- Marca y botón de menú lateral -->
       <div class="d-flex align-items-center">
         <div class="menu-container d-flex align-items-center me-2">
           <div class="menu d-flex" id="menu-btn">
@@ -32,7 +33,7 @@
           <span class="name">Easyequip</span>
         </div>
       </div>
-      <div class="right">
+      <div class="right ">
         <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle bx-sm'></i></a>
         <a class="d-none d-lg-flex" href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i></a>
         <a class="d-none d-lg-flex" href="#"><i class='bx bx-bell-ring bx-sm'></i></a>
@@ -40,6 +41,7 @@
       </div>
     </div>
   </header>
+
 
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
@@ -93,59 +95,64 @@
 
   </section>
 
-  <!-- Contenido principal -->
+
   <main id="main">
-    <section>
-      <div>
-        <h3>Gestion de Equipos Registrados</h3>
-        <p>Aquí puedes consultar los equipos registrados en el sistema.</p>
-      </div>
-    </section>
 
-    <section class="bg-light border border-1 border-secondary border-opacity-25 rounded-1 py-4 px-4 my-4">
+    <!-- Contenido principal -->
+    <main id="main" style="margin-top: 80px; padding: 20px;">
+      <div class="container mt-4">
+        <h3 class="text-center mb-4">Registrar Nuevo Equipo</h3>
 
-      <div class="my-2 my-md-3 ">
-        <div>
-          <button class="btn btn-primary me-2" onclick="window.location.href='consultarEquipo.html'">Consultar
-            Equipo</button>
-          <button class="btn btn-success" onclick="window.location.href='registrarEquipo.html'">Registrar
-            Equipo</button>
-        </div>
-      </div>
-
-      <!--Tabla de equipos-->
-      <div class="card">
-        <div class="card-header">
-          <h5 class="card-title">Equipos Registrados</h5>
-        </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-hover">
-              <thead class="">
-                <tr>
-                  <th>ID</th>
-                  <th>Nombre</th>
-                  <th>Descripción</th>
-                  <th>Cantidad Disponible</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody id="cuerpoTabla">
-                <!-- Filas dinámicas -->
-              </tbody>
-            </table>
+        <form id="formRegistrar" class="mx-auto" style="max-width: 600px;">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
           </div>
-        </div>
+
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="cantidadDisponible" class="form-label">Cantidad Disponible</label>
+            <input type="number" class="form-control" id="cantidadDisponible" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Registrar Equipo</button>
+          <a href="equipoAdministrador.html" class="btn btn-secondary ms-2">Cancelar</a>
+        </form>
       </div>
-    </section>
-  </main>
+    </main>
 
+    <script>
+      document.getElementById("formRegistrar").addEventListener("submit", (event) => {
+        event.preventDefault();
 
-  <script src="../js/getEquiposAdmin.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="../public/js/Sidebar.js"></script>
+        const nuevoEquipo = {
+          nombre: document.getElementById("nombre").value,
+          descripcion: document.getElementById("descripcion").value,
+          cantidadDisponible: parseInt(document.getElementById("cantidadDisponible").value)
+        };
+
+        fetch("https://localhost:44313/api/Equipo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(nuevoEquipo)
+        })
+          .then(response => {
+            if (!response.ok) throw new Error("No se pudo registrar el equipo");
+            alert("Equipo registrado correctamente");
+            window.location.href = "EquipoAdministrador.html";
+          })
+          .catch(error => alert("Error al registrar el equipo: " + error.message));
+      });
+    </script>
+
+    <script src="../public/js/Sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
