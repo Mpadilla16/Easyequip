@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="../public/styles/solicitudesAdministrador.css">
+  <link rel="stylesheet" href="../public/styles/equiposUsuarios.css">
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
 </head>
@@ -44,45 +44,77 @@
   <section class="sidebar border-1 border-end border-opacity-25 border-secondary" id="sidebar">
     <nav>
       <ul class="list-unstyled">
-        <li><a href="../src/solicitudesAdministrador.html" class="seleccionado"><i class='bx bx-picture-in-picture-close bx-sm'></i><span>Solicitudes</span></a></li>
-        <li><a href="../src/gestionUsuarioAdministrador.html"><i class='bx bx-group bx-sm'></i><span>Usuarios</span></a></li>
-        <li><a href="../src/equipoAdministrador.html"><i class='bx bx-laptop bx-sm'></i><span>Equipos</span></a></li>
-        <li><a href="../src/historialAdministrador.html"><i class='bx bx-history bx-sm'></i><span>Historial</span></a></li>
-        <li><a href="#"><i class='bx bx-user-circle bx-sm'></i><span>Mi Cuenta</span></a></li>
+        <li title="Inicio">
+          <a href="../src/InicioUsuario.html">
+            <i class='bx  bx-home-alt bx-rotate-90 bx-flip-horizontal bx-sm '></i>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li title="Solicitudes">
+          <a href="../src/solicitudesUsuarios.html">
+            <i class='bx  bx-picture-in-picture-close bx-sm'></i>
+            <span>Solicitudes</span>
+          </a>
+        </li>
+        <li title="Equipos">
+          <a href="../src/EquiposUsuarios.html" class="seleccionado">
+            <i class='bx  bx-laptop bx-sm'></i>
+            <span>Equipos</span>
+          </a>
+        </li>
+        <li title="Cuenta">
+          <a href="../src/historialUsuario.html">
+            <i class='bx  bx-user-circle bx-sm'></i>
+            <span>Cuenta</span>
+          </a>
+        </li>
+
       </ul>
 
-      <ul class="list-unstyled d-lg-none border-1 border-top border-secondary border-opacity-25">
-        <li><a href="#"><i class='bx bx-message-circle bx-sm'></i><span>Mensajes</span></a></li>
-        <li><a href="#"><i class='bx bx-bell-ring bx-sm'></i><span>Notificaciones</span></a></li>
-        <li><a href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i><span>Ayuda</span></a></li>
+      <!--Opciones para el usuaruio-->
+      <ul class="list-unstyled d-lg-none border-1 border-top  border-secondary border-opacity-25 ">
+        <li>
+          <a href="#"><i class='bx bx-message-circle bx-sm'></i> <span>Mensajes</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-bell-ring bx-sm'></i> <span>Notificaciones</span></a>
+        </li>
+        <li>
+          <a href="#"><i class='bx bx-message-circle-question-mark bx-sm'></i><span>Ayuda</span></a>
+        </li>
       </ul>
     </nav>
+
   </section>
 
   <!-- Contenido principal -->
-  <main class="container mt-5 pt-5" style="margin-left: 200px;">
-    <div class="my-4">
+  <main class="" id="main">
+    <div class="d-flex flex-column flex-lg-row gap-3 my-3">
       <h2>Lista de Equipos</h2>
+      <button class="btn btn-primary" id="btnConsultar">Consultar Equipo</button>
     </div>
 
-    <table class="table table-bordered table-striped text-center align-middle">
-      <thead class="table-dark">
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Descripción</th>
-          <th>Cantidad Disponible</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="cuerpoTabla">
-        <!-- Filas dinámicas -->
-      </tbody>
-    </table>
+    <section class="card">
 
-    <div class="text-center my-4">
-      <button class="btn btn-primary me-2" id="btnConsultar">Consultar Equipo</button>
-    </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Cantidad Disponible</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+            <!-- Filas dinámicas -->
+          </tbody>
+        </table>
+
+      </div>
+
+    </section>
   </main>
 
   <!-- Scripts -->

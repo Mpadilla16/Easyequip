@@ -154,6 +154,25 @@ main{
 main.menu-toggle{
     margin-left: 18.75rem;
 }
+.panel .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel .card:hover,
+.panel .card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+div h4{
+    color: var(--color-text-secondary);
+}
+div h5{
+    color: var(--color-primary-hover);
+}
+.card-body h5{
+    color:var(--color-text-primary)
+}
+
 
 
 /*Estilos responsivos*/
